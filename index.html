@@ -4,33 +4,36 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Digital Agency</title>	
-		
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-	<div class="wrapper">
-		<div class="container">
-			<header class="header">
-				<a href="#" class="header__logo">
-					<img src="img/icons/Logo Icon.svg" alt="logo">
-				</a>
-				<nav class="header__nav nav">
-					<ul class="header__ul" id="headerUl">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Our Project</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Contact us</a></li>
-						<span class="material-symbols-outlined" id="close" onclick="navToggle()">close</span>
-					</ul>
-				</nav>
-				<div class="header__burger">
-					<span class="material-symbols-outlined" onclick="navToggle()">menu</span>
-			   </div>
-			</header>
-			<footer class="footer">
+<body>			
+	<header class="header container">
+		<a href="#" class="header__logo">
+			<img src="img/icons/logo.png">
+		<nav class="header__nav nav">
+			<ul class="header__ul" id="headerUl">
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Our Project</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#" class="btn header__btn">Contact us</a></li>
+				<span class="material-symbols-outlined icon-close" id="close" onclick="navToggle()">close</span>
+				
+			</ul>
+		</nav>
+		<div class="header__burger" onclick="navToggle()">
+			<span><img src="img/icons/menu-icon.svg" alt="menu"></span>
+			
+	</header>
+	<footer class="footer container">
 				<a href="#" class="footer__logo"></a>
 				<nav class="nav">
 					<ul>
@@ -40,15 +43,14 @@
 					</ul>
 				</nav>
 
-			</footer>
+	</footer>
 			
-		</div>
-			
-
+		
 			
 
-	</div>
+			
 
+	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 	integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
 	crossorigin="anonymous"></script>

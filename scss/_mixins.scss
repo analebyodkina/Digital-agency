@@ -1,17 +1,11 @@
-@mixin text ($ff, $fz, $lh, $fw, $color) {
-  font-family: $ff;
+@mixin text ($fz, $lh, $fw, $color) {  
   font-size: $fz;
   line-height: $lh;
   font-weight: $fw;
   color: $color;
 }
 @mixin btn {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: $white;
-  padding: 13px 18px;
+  // display: inline-block;  
   border-radius: 5px;
   border: 1px solid $color-primary;
   background: $color-primary;

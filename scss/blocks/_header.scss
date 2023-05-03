@@ -1,3 +1,53 @@
 .header {
-    background: orange;
+    @include flex-between;
+    padding-top: 42rem;
+    margin-bottom: 96rem;
+    @include mobile-576 {
+        padding-top: 45rem;
+        margin-bottom: 69rem;
+    }
+    &__logo {
+        @include mobile-576 {
+            max-width: 115rem;
+        }
+    }
+    &__nav {
+        display: flex;
+    }
+
+    &__ul {
+        display: flex;
+        flex-grow: 1;
+        gap: 40rem;
+        transition: $transition;
+        &:first-child {
+            margin-left: auto;
+        }
+        a {
+            @include text (18rem, 25rem, 400, $color-text);
+            font-family: $ff;
+        }
+        .active {
+            color: $color-primary;
+        }
+    }
+    .icon-close {
+        display: none;
+    }
+    &__btn {
+        @include btn;
+        background: transparent;
+        margin-left: auto;
+        padding: 11rem 42rem;
+        border: 1px solid $color-white;
+        backdrop-filter: blur(1px);
+
+    }
+    &__burger {
+        display: none;        
+        @include tablet-992 {
+            display: inline-block;
+            color: $color-white;
+        }
+    }
 }
