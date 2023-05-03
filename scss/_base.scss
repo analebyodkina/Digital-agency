@@ -5,9 +5,12 @@ html {
     font-size: 1px;
 }
 .container {
-    max-width: 1235px;
-    padding: 0 15px;
+    max-width: 1235rem;
+    padding: 0 15rem;
     margin-inline: auto;
+    @include tablet-small-768 {
+        padding: 0 24rem;
+    }
 }
 body {
     font-family: $ff;
@@ -34,7 +37,13 @@ ul {
 }
 button {
     padding: 0;
-  }
+}
+.btn {
+  display: inline-block;  
+  border-radius: 5rem;
+  border: 1rem solid $color-primary;
+  background: $color-primary;
+}
 // .title {
 //     @include text($ff, 48px, 56px, 700, $color-text);
 //     margin-top: 111px;
@@ -46,14 +55,10 @@ button {
 //         margin-bottom: 40px;
 //     }
 // }
-// .desc {
-//     @include text($ff, 16px, 19px, 400, $color-text);
-//     margin-top: 111px;
-//     margin-bottom: 123px;
-//     margin-inline: auto;
-//     max-width: 837px;
-//     @include tablet-small-768 {        
-//         margin-top: 40px;
-//         margin-bottom: 40px;
-//     }
-// }
+.desc {
+    @include text($ff, 21rem, 39rem, 400, $color-text);    
+    letter-spacing: -0.66rem;
+    @include tablet-small-768 {        
+        @include text($ff, 16rem, 24rem, 400, $color-text);
+    }
+}

@@ -17,6 +17,7 @@
 
     &__ul {
         display: flex;
+        align-items: center;
         flex-grow: 1;
         gap: 40rem;
         transition: $transition;
@@ -24,18 +25,21 @@
             margin-left: auto;
         }
         a {
-            @include text (18rem, 25rem, 400, $color-text);
-            font-family: $ff;
-        }
-        .active {
-            color: $color-primary;
-        }
+            @include text ($ff, 18rem, 25rem, 400, $color-text);            
+            transition: $transition;
+            @include press;
+            &:not(.btn):hover {
+                color: $color-primary;
+            }
+        }        
+    }
+    .active {
+        color: $color-primary;
     }
     .icon-close {
         display: none;
     }
-    &__btn {
-        @include btn;
+    &__btn {        
         background: transparent;
         margin-left: auto;
         padding: 11rem 42rem;

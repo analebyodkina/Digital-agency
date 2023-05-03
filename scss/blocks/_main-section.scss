@@ -1,0 +1,49 @@
+.main-section {
+    @include flex-between;
+    overflow-x: hidden;
+    @include tablet-992 {
+        flex-direction: column;
+    }
+
+	&__info {
+	}
+	&__title {
+	}
+	&__desc {
+        max-width: 536rem;
+        margin-top: 24rem;
+        @include mobile-576 {
+            margin-top: 30rem;
+        }
+	}    
+	&__btn {
+        padding: 16rem 27rem;        
+        @include text($ff, 20rem, 27rem, 700, $color-white);        
+        @include press;
+        display: inline-flex;
+        align-items: center;
+        gap: 14rem;
+        margin-top: 50rem;
+        @include mobile-576 {
+            @include text($ff, 16rem, 22rem, 700, $color-white); 
+        }
+        img {
+            max-width: 12rem;
+            font-weight: 700;
+        }
+        @include tablet-992 {
+            margin-bottom: 92.5rem;
+        }
+	}
+    &__image {
+        max-width: 656rem;        
+        img {            
+            transform: translateX(75rem);
+            @include tablet-992 {
+                transform: translateX(0);
+                transform: translateY(-75px);
+            }
+        } 
+    }
+}
+

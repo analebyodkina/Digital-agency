@@ -1,14 +1,12 @@
-@mixin text ($fz, $lh, $fw, $color) {  
+@mixin text ($ff, $fz, $lh, $fw, $color) {
+  font-family: $ff;  
   font-size: $fz;
   line-height: $lh;
   font-weight: $fw;
   color: $color;
 }
-@mixin btn {
-  // display: inline-block;  
-  border-radius: 5px;
-  border: 1px solid $color-primary;
-  background: $color-primary;
+@mixin press{
+  display: inline-block;
   &:active {
     animation: scale-down-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both normal;
     @keyframes scale-down-center {
