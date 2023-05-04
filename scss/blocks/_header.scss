@@ -10,20 +10,23 @@
         @include mobile-576 {
             max-width: 115rem;
         }
+    } 
+    &__burger {
+        display: none;        
+        @include tablet-992 {
+            display: inline-block;
+            color: $color-white;
+        }
     }
-    &__nav {
-        display: flex;
-    }
-
-    &__ul {
-        display: flex;
+}
+.nav {
+    flex-grow: 1;
+    &__ul { 
+        display: flex;       
         align-items: center;
         flex-grow: 1;
         gap: 40rem;
-        transition: $transition;
-        &:first-child {
-            margin-left: auto;
-        }
+        transition: $transition;        
         a {
             @include text ($ff, 18rem, 25rem, 400, $color-text);            
             transition: $transition;
@@ -33,25 +36,30 @@
             }
         }        
     }
+    &__li {
+        &:first-child, &:last-of-type {
+            margin-left: auto;
+            @include tablet-992 {
+                margin-left: inherit;
+            }
+
+        }
+    }
     .active {
         color: $color-primary;
+        @include tablet-992 {
+            color: $color-text;
+        }
     }
     .icon-close {
         display: none;
+
     }
     &__btn {        
-        background: transparent;
-        margin-left: auto;
+        background: transparent;        
         padding: 11rem 42rem;
         border: 1px solid $color-white;
         backdrop-filter: blur(1px);
 
-    }
-    &__burger {
-        display: none;        
-        @include tablet-992 {
-            display: inline-block;
-            color: $color-white;
-        }
     }
 }

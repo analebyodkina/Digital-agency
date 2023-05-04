@@ -355,6 +355,22 @@ button {
   border: 1rem solid #5454D4;
   background: #5454D4; }
 
+.title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 60rem;
+  line-height: 70rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Graphic", sans-serif; }
+  @media (max-width: 576px) {
+    .title {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 36rem;
+      line-height: 54rem;
+      font-weight: 700;
+      color: #fff;
+      font-family: "Graphic", sans-serif; } }
+
 .desc {
   font-family: "Nunito Sans", sans-serif;
   font-size: 21rem;
@@ -370,6 +386,11 @@ button {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.7); } }
 
+@font-face {
+  font-family: 'Graphic';
+  src: url("fonts/graphik-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,11 +410,18 @@ button {
   @media (max-width: 576px) {
     .header__logo {
       max-width: 115rem; } }
-  .header__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .header__ul {
+  .header__burger {
+    display: none; }
+    @media (max-width: 992px) {
+      .header__burger {
+        display: inline-block;
+        color: #fff; } }
+
+.nav {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .nav__ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -406,9 +434,7 @@ button {
     gap: 40rem;
     -webkit-transition: 0.2s all ease-in-out;
     transition: 0.2s all ease-in-out; }
-    .header__ul:first-child {
-      margin-left: auto; }
-    .header__ul a {
+    .nav__ul a {
       font-family: "Nunito Sans", sans-serif;
       font-size: 18rem;
       line-height: 25rem;
@@ -417,7 +443,7 @@ button {
       -webkit-transition: 0.2s all ease-in-out;
       transition: 0.2s all ease-in-out;
       display: inline-block; }
-      .header__ul a:active {
+      .nav__ul a:active {
         -webkit-animation: scale-down-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both normal;
                 animation: scale-down-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both normal; }
 @-webkit-keyframes scale-down-center {
@@ -434,28 +460,29 @@ button {
   100% {
     -webkit-transform: scale(0.93);
     transform: scale(0.93); } }
-      .header__ul a:not(.btn):hover {
+      .nav__ul a:not(.btn):hover {
         color: #5454D4; }
-  .header .active {
+  .nav__li:first-child, .nav__li:last-of-type {
+    margin-left: auto; }
+    @media (max-width: 992px) {
+      .nav__li:first-child, .nav__li:last-of-type {
+        margin-left: inherit; } }
+  .nav .active {
     color: #5454D4; }
-  .header .icon-close {
+    @media (max-width: 992px) {
+      .nav .active {
+        color: rgba(255, 255, 255, 0.7); } }
+  .nav .icon-close {
     display: none; }
-  .header__btn {
+  .nav__btn {
     background: transparent;
-    margin-left: auto;
     padding: 11rem 42rem;
     border: 1px solid #fff;
     -webkit-backdrop-filter: blur(1px);
             backdrop-filter: blur(1px); }
-  .header__burger {
-    display: none; }
-    @media (max-width: 992px) {
-      .header__burger {
-        display: inline-block;
-        color: #fff; } }
 
 @media (max-width: 992px) {
-  .header__ul {
+  .nav__ul {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -480,23 +507,17 @@ button {
     transition: 0.2s all ease-in-out;
     z-index: 99; }
 
-  .header__ul.active {
+  .nav__ul.active {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
     z-index: 99; }
 
-  .header__ul .icon-close {
+  .nav__ul .icon-close {
     display: inline-block;
     position: fixed;
     top: 40px;
     right: 40px;
-    color: #fff; }
-
-  .header__a {
-    color: #fff;
-    font-size: 30px;
-    line-height: 46px;
-    font-weight: 600; } }
+    color: #fff; } }
 .main-section {
   display: -webkit-box;
   display: -ms-flexbox;

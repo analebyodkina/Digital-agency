@@ -44,17 +44,14 @@ button {
   border: 1rem solid $color-primary;
   background: $color-primary;
 }
-// .title {
-//     @include text($ff, 48px, 56px, 700, $color-text);
-//     margin-top: 111px;
-//     margin-bottom: 70px;
-//     @include tablet-small-768{
-//         font-size: 35px;
-//         line-height: 45px;
-//         margin-top: 70px;
-//         margin-bottom: 40px;
-//     }
-// }
+.title {
+    @include text($ff, 60rem, 70rem, 700, $color-white);
+    font-family: $ff-titles;       
+    @include mobile-576{
+        @include text($ff, 36rem, 54rem, 700, $color-white);
+        font-family: $ff-titles;
+    }
+}
 .desc {
     @include text($ff, 21rem, 39rem, 400, $color-text);    
     letter-spacing: -0.66rem;

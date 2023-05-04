@@ -1,5 +1,5 @@
 @include tablet-992 {
-    .header__ul {
+    .nav__ul {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -15,23 +15,16 @@
         transition: $transition;
         z-index: 99;
     }
-    .header__ul.active {
+    .nav__ul.active {
         transform: translateX(0%);
         z-index: 99;
     }
-    .header__ul .icon-close {
+    .nav__ul .icon-close {
         display: inline-block;
         position: fixed;
         top: 40px;
         right: 40px;
         color: $color-white;
     }
-    .header__a {
-        color: $color-white;
-        font-size: 30px;
-        line-height: 46px;
-        font-weight: 600;
-    }
-    
 
 }
