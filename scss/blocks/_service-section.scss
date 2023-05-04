@@ -23,7 +23,7 @@
         }
     }
 }
-.item {
+.row__item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +42,9 @@
             filter: saturate(150%);
             box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7);
         }
-      }   
+      }
+} 
+.service-section .item { 
     &__title {
         @include text($ff-titles, 28rem, 38rem, 600, $color-white); 
         letter-spacing: -0.75rem; 
