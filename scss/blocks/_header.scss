@@ -1,7 +1,7 @@
 .header {
     @include flex-between;
     padding-top: 42rem;
-    margin-bottom: 96rem;
+    padding-bottom: 96rem;
     @include mobile-576 {
         padding-top: 45rem;
         margin-bottom: 69rem;

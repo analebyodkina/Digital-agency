@@ -1,19 +1,27 @@
 .main-section {
     @include flex-between;
     overflow-x: hidden;
+    margin-bottom: 151rem;
+    @include tablet-992 {
+        margin-bottom: 75rem;
+    }
     @include tablet-992 {
         flex-direction: column;
     }
-
-	&__info {
-	}
 	&__title {
+        @include text($ff-titles, 80rem, 84rem, 700, $color-white);
+        max-width: 582rem;    
+        @include mobile-576{
+            @include text($ff, 42rem, 63rem, 700, $color-white);
+            max-width: 327rem;            
+        }
 	}
 	&__desc {
         max-width: 536rem;
         margin-top: 24rem;
         @include mobile-576 {
             margin-top: 30rem;
+            max-width: 327rem;
         }
 	}    
 	&__btn {
@@ -34,14 +42,17 @@
         @include tablet-992 {
             margin-bottom: 92.5rem;
         }
+        &:hover {
+            background: darken($color-primary, 10%);
+        }
 	}
     &__image {
         max-width: 656rem;        
         img {            
-            transform: translateX(75rem);
+            transform: translate(75rem, -65rem);
+            
             @include tablet-992 {
-                transform: translateX(0);
-                transform: translateY(-75px);
+                transform: translate(0, -65rem);                
             }
         } 
     }

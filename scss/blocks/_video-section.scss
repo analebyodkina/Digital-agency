@@ -1,0 +1,21 @@
+.video-section {
+    margin-bottom: 15rem;
+    @include tablet-992 {
+        margin-bottom: 140rem;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50rem;
+        @include tablet-992 {
+            flex-direction: column;
+            gap: 30rem;
+        }
+    }
+    &__title, &__desc {
+        max-width: 588rem;
+        @include mobile-576 {
+            max-width: 327rem;            
+        }        
+    }
+}

@@ -41,15 +41,16 @@ button {
 .btn {
   display: inline-block;  
   border-radius: 5rem;
-  border: 1rem solid $color-primary;
+  border: 0;
+  outline: 0;  
   background: $color-primary;
+  transition: $transition;
 }
 .title {
-    @include text($ff, 60rem, 70rem, 700, $color-white);
-    font-family: $ff-titles;       
+    @include text($ff-titles, 60rem, 70rem, 700, $color-white);         
     @include mobile-576{
-        @include text($ff, 36rem, 54rem, 700, $color-white);
-        font-family: $ff-titles;
+        @include text($ff-titles, 36rem, 54rem, 700, $color-white);
+        
     }
 }
 .desc {
