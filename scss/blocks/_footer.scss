@@ -1,0 +1,41 @@
+.footer {
+    @include flex-between;
+    padding-top: 50rem;
+    padding-bottom: 100rem;
+    @include tablet-small-768 {
+        flex-direction: column;
+        gap: 40rem;
+        padding-top: 140rem;
+        padding-bottom: 50rem;
+    }
+    &__logo {
+    }
+
+    &__ul {
+        display: flex;
+        gap: 40rem;
+        @include tablet-992 {
+            flex-direction: column;
+            align-items: center            
+        }
+        a {
+            @include text ($ff, 18rem, 25rem, 400, $color-text);
+            transition: $transition;
+            @include press;
+            &:hover {
+                color: $color-primary;
+            }
+            @include tablet-992 {
+                @include text ($ff, 18rem, 28rem, 700, $color-text);
+            }
+        }
+    }
+
+    &__copyright {
+        @include text ($ff, 16rem, 38rem, 400, $color-text);
+        letter-spacing: -0.5rem;
+        @include tablet-992 {
+            @include text ($ff-titles, 18rem, 28rem, 400, $color-white);
+        }
+    }
+}

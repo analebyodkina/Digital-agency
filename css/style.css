@@ -594,7 +594,8 @@ button {
         font-size: 16rem;
         line-height: 22rem;
         font-weight: 700;
-        color: #fff; } }
+        color: #fff;
+        padding: 12rem 21rem; } }
     .main-section__btn img {
       max-width: 12rem;
       font-weight: 700; }
@@ -767,3 +768,126 @@ button {
 .owl-carousel .owl-stage-outer {
   overflow-x: hidden;
   height: 467rem; }
+
+.contact-section {
+  background: rgba(30, 30, 32, 0.5);
+  padding: 187rem 0; }
+  @media (max-width: 576px) {
+    .contact-section {
+      padding: 80rem 0; } }
+  .contact-section__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15rem; }
+    @media (max-width: 992px) {
+      .contact-section__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        gap: 50rem; } }
+  .contact-section__title {
+    max-width: 826rem;
+    -ms-flex-negative: 1;
+        flex-shrink: 1; }
+  .contact-section__btn {
+    padding: 16rem 49rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 21rem;
+    line-height: 29rem;
+    font-weight: 700;
+    color: #fff;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    @media (max-width: 576px) {
+      .contact-section__btn {
+        line-height: 22rem;
+        padding: 11rem 33rem; } }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50rem;
+  padding-bottom: 100rem; }
+  @media (max-width: 768px) {
+    .footer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      gap: 40rem;
+      padding-top: 140rem;
+      padding-bottom: 50rem; } }
+  .footer__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40rem; }
+    @media (max-width: 992px) {
+      .footer__ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    .footer__ul a {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 18rem;
+      line-height: 25rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+      -webkit-transition: 0.3s all ease-in-out;
+      transition: 0.3s all ease-in-out;
+      display: inline-block; }
+      .footer__ul a:active {
+        -webkit-animation: scale-down-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both normal;
+                animation: scale-down-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both normal; }
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.93);
+    transform: scale(0.93); } }
+      .footer__ul a:hover {
+        color: #5454D4; }
+      @media (max-width: 992px) {
+        .footer__ul a {
+          font-family: "Nunito Sans", sans-serif;
+          font-size: 18rem;
+          line-height: 28rem;
+          font-weight: 700;
+          color: rgba(255, 255, 255, 0.7); } }
+  .footer__copyright {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16rem;
+    line-height: 38rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: -0.5rem; }
+    @media (max-width: 992px) {
+      .footer__copyright {
+        font-family: "Graphic", sans-serif;
+        font-size: 18rem;
+        line-height: 28rem;
+        font-weight: 400;
+        color: #fff; } }

@@ -33,7 +33,8 @@
         gap: 14rem;
         margin-top: 50rem;
         @include mobile-576 {
-            @include text($ff, 16rem, 22rem, 700, $color-white); 
+            @include text($ff, 16rem, 22rem, 700, $color-white);
+            padding: 12rem 21rem; 
         }
         img {
             max-width: 12rem;
