@@ -29,7 +29,20 @@
     align-items: center;
     text-align: center;
     padding: 48rem 43rem;
-    gap: 24rem;    
+    gap: 24rem; 
+    transition: all 0.5s;
+    &:hover{
+        transition: all 0.7s;
+        // background: #eee;
+        transform: translateY(-10rem);
+        box-shadow: inset 0 0 15rem $color-primary;
+        border-radius: 10rem;
+        img {
+            transform: scale(1.2);
+            filter: saturate(150%);
+            box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7);
+        }
+      }   
     &__title {
         @include text($ff-titles, 28rem, 38rem, 600, $color-white); 
         letter-spacing: -0.75rem; 
@@ -47,7 +60,9 @@
         }
     }
     img {
-        max-width: 69rem;
+        border-radius: 50%;
+        max-width: 69rem; 
+        transition: $transition;       
     } 
 }  
 
