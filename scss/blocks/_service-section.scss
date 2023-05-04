@@ -23,29 +23,43 @@
         }
     }
 }
-.row__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 48rem 43rem;
-    gap: 24rem; 
-    transition: all 0.5s;
-    &:hover{
-        transition: all 0.7s;
-        // background: #eee;
-        transform: translateY(-10rem);
-        box-shadow: inset 0 0 15rem $color-primary;
-        border-radius: 10rem;
-        img {
-            transform: scale(1.2);
-            filter: saturate(150%);
-            box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7);
+.card {
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 48rem 43rem;
+        gap: 24rem; 
+        transition: all 0.5s;
+        &:hover{
+            transition: all 0.7s;        
+            transform: translateY(-10rem);        
+            border-radius: 10rem;
+            img {
+                transform: scale(1.2);
+                filter: saturate(150%);
+                box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7);
+            }
+          }
+        &._red {
+            &:hover {
+                box-shadow: inset 0 0 15rem #F04037;
+            }
         }
-      }
-} 
-.service-section .item { 
-    &__title {
+        &._blue {
+            &:hover {
+                box-shadow: inset 0 0 15rem $color-primary;
+            }
+        }
+        &._yellow {
+            &:hover {
+                box-shadow: inset 0 0 15rem #FEDC5A;
+            }
+        }
+
+    }
+    &__title {        
         @include text($ff-titles, 28rem, 38rem, 600, $color-white); 
         letter-spacing: -0.75rem; 
         @include mobile-576{
@@ -61,10 +75,12 @@
             max-width: 269rem;
         }
     }
-    img {
+    &__icon {
         border-radius: 50%;
-        max-width: 69rem; 
-        transition: $transition;       
-    } 
-}  
-
+        img {
+            border-radius: 50%;
+            max-width: 69rem; 
+            transition: $transition;       
+        } 
+    }
+}

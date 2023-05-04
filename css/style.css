@@ -407,7 +407,7 @@ button {
   @media (max-width: 576px) {
     .header {
       padding-top: 45rem;
-      margin-bottom: 69rem; } }
+      padding-bottom: 69rem; } }
   @media (max-width: 576px) {
     .header__logo {
       max-width: 115rem; } }
@@ -462,7 +462,7 @@ button {
   100% {
     -webkit-transform: scale(0.93);
     transform: scale(0.93); } }
-      .nav__ul a:not(.button):hover {
+      .nav__ul a:not(.nav__button):hover {
         color: #5454D4; }
   .nav__li:first-child, .nav__li:last-of-type {
     margin-left: auto; }
@@ -482,8 +482,10 @@ button {
     position: fixed;
     width: 100%;
     height: 100%;
+    -webkit-box-shadow: inset 0 0 15rem rgba(154, 152, 152, 0.7);
+            box-shadow: inset 0 0 15rem rgba(154, 152, 152, 0.7);
     overflow-y: auto;
-    background: #5454D4;
+    background: #19191B;
     left: 0;
     top: 0;
     -webkit-box-orient: vertical;
@@ -497,15 +499,15 @@ button {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 40px;
-    -webkit-transform: translateX(120%);
-            transform: translateX(120%);
+    -webkit-transform: translateY(-120%);
+            transform: translateY(-120%);
     -webkit-transition: 0.3s all ease-in-out;
     transition: 0.3s all ease-in-out;
     z-index: 99; }
 
   .nav__ul.active {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
     z-index: 99; }
 
   .nav__ul .icon-close {
@@ -514,7 +516,7 @@ button {
     top: 40px;
     right: 40px;
     color: #fff; } }
-.button {
+.nav__button {
   position: relative;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16rem;
@@ -527,7 +529,7 @@ button {
   background: transparent;
   -webkit-transition: 0.5s all;
   transition: 0.5s all; }
-  .button:before {
+  .nav__button:before {
     content: '';
     position: absolute;
     top: 0;
@@ -539,7 +541,7 @@ button {
     border-radius: 5px;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
-  .button:after {
+  .nav__button:after {
     content: '';
     position: absolute;
     top: calc(-1 * 3px);
@@ -552,9 +554,9 @@ button {
     background-size: 300% 300%;
     z-index: -2;
     border-radius: 5px; }
-  .button:hover {
+  .nav__button:hover {
     color: #19191B; }
-    .button:hover:before {
+    .nav__button:hover:before {
       width: 0%; }
 
 @-webkit-keyframes animatedgradient {
@@ -716,7 +718,7 @@ button {
       .service-section__title {
         max-width: 327rem; } }
 
-.row__item {
+.card__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,23 +734,29 @@ button {
   gap: 24rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
-  .row__item:hover {
+  .card__item:hover {
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
     -webkit-transform: translateY(-10rem);
             transform: translateY(-10rem);
-    -webkit-box-shadow: inset 0 0 15rem #5454D4;
-            box-shadow: inset 0 0 15rem #5454D4;
     border-radius: 10rem; }
-    .row__item:hover img {
+    .card__item:hover img {
       -webkit-transform: scale(1.2);
               transform: scale(1.2);
       -webkit-filter: saturate(150%);
               filter: saturate(150%);
       -webkit-box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7);
               box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7); }
-
-.service-section .item__title {
+  .card__item._red:hover {
+    -webkit-box-shadow: inset 0 0 15rem #F04037;
+            box-shadow: inset 0 0 15rem #F04037; }
+  .card__item._blue:hover {
+    -webkit-box-shadow: inset 0 0 15rem #5454D4;
+            box-shadow: inset 0 0 15rem #5454D4; }
+  .card__item._yellow:hover {
+    -webkit-box-shadow: inset 0 0 15rem #FEDC5A;
+            box-shadow: inset 0 0 15rem #FEDC5A; }
+.card__title {
   font-family: "Graphic", sans-serif;
   font-size: 28rem;
   line-height: 38rem;
@@ -756,13 +764,13 @@ button {
   color: #fff;
   letter-spacing: -0.75rem; }
   @media (max-width: 576px) {
-    .service-section .item__title {
+    .card__title {
       font-family: "Graphic", sans-serif;
       font-size: 24rem;
       line-height: 33rem;
       font-weight: 700;
       color: #fff; } }
-.service-section .item__desc {
+.card__desc {
   font-family: "Graphic", sans-serif;
   font-size: 20rem;
   line-height: 28rem;
@@ -771,18 +779,20 @@ button {
   letter-spacing: -0.5rem;
   max-width: 299rem; }
   @media (max-width: 576px) {
-    .service-section .item__desc {
+    .card__desc {
       font-family: "Graphic", sans-serif;
       font-size: 16rem;
       line-height: 28rem;
       font-weight: 400;
       color: #fff;
       max-width: 269rem; } }
-.service-section .item img {
-  border-radius: 50%;
-  max-width: 69rem;
-  -webkit-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out; }
+.card__icon {
+  border-radius: 50%; }
+  .card__icon img {
+    border-radius: 50%;
+    max-width: 69rem;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
 
 .portfolio-section {
   margin-bottom: 168rem; }
@@ -861,7 +871,20 @@ button {
     font-weight: 700;
     color: #fff;
     -ms-flex-negative: 0;
-        flex-shrink: 0; }
+        flex-shrink: 0;
+    display: inline-block; }
+    .contact-section__btn:active {
+      -webkit-animation: scale-down-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both normal;
+              animation: scale-down-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both normal; }
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    -webkit-transform: scale(0.93);
+    transform: scale(0.93); } }
+    .contact-section__btn:hover {
+      background: #3131c4; }
     @media (max-width: 576px) {
       .contact-section__btn {
         line-height: 22rem;

@@ -4,7 +4,7 @@
     padding-bottom: 96rem;
     @include mobile-576 {
         padding-top: 45rem;
-        margin-bottom: 69rem;
+        padding-bottom: 69rem;
     }
     &__logo {
         @include mobile-576 {
@@ -32,7 +32,7 @@
             @include text ($ff, 18rem, 25rem, 400, $color-text);            
             transition: $transition;
             @include press;
-            &:not(.button):hover {
+            &:not(.nav__button):hover {
                 color: $color-primary;
             }
         }        
@@ -54,5 +54,6 @@
     }
     .icon-close {
         display: none;
-    }   
+    }
+   
 }
