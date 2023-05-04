@@ -614,7 +614,7 @@ button {
                   transform: translate(0, -65rem); } }
 
 .video-section {
-  margin-bottom: 15rem; }
+  margin-bottom: 150rem; }
   @media (max-width: 992px) {
     .video-section {
       margin-bottom: 140rem; } }
@@ -638,3 +638,73 @@ button {
     @media (max-width: 576px) {
       .video-section__title, .video-section__desc {
         max-width: 327rem; } }
+
+.service-section {
+  margin-bottom: 150rem; }
+  @media (max-width: 992px) {
+    .service-section {
+      margin-bottom: 140rem; } }
+  .service-section__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 992px) {
+      .service-section__row {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 576px) {
+      .service-section__row {
+        grid-template-columns: 1fr; } }
+  .service-section__title {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 695rem;
+    margin-bottom: 98rem; }
+    @media (max-width: 576px) {
+      .service-section__title {
+        max-width: 327rem; } }
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 48rem 43rem;
+  gap: 24rem; }
+  .item__title {
+    font-family: "Graphic", sans-serif;
+    font-size: 28rem;
+    line-height: 38rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.75rem; }
+    @media (max-width: 576px) {
+      .item__title {
+        font-family: "Graphic", sans-serif;
+        font-size: 24rem;
+        line-height: 33rem;
+        font-weight: 700;
+        color: #fff; } }
+  .item__desc {
+    font-family: "Graphic", sans-serif;
+    font-size: 20rem;
+    line-height: 28rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: -0.5rem;
+    max-width: 299rem; }
+    @media (max-width: 576px) {
+      .item__desc {
+        font-family: "Graphic", sans-serif;
+        font-size: 16rem;
+        line-height: 28rem;
+        font-weight: 400;
+        color: #fff;
+        max-width: 269rem; } }
+  .item img {
+    max-width: 69rem; }

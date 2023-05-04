@@ -1,0 +1,53 @@
+.service-section {
+    margin-bottom: 150rem;
+    @include tablet-992 {
+        margin-bottom: 140rem;
+    }
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include tablet-992 {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+        @include mobile-576 {
+            grid-template-columns: 1fr; 
+        }
+    }
+    &__title {
+        text-align: center;
+        margin-inline: auto;
+        max-width: 695rem;
+        margin-bottom: 98rem;
+        @include mobile-576 {
+            max-width: 327rem;
+        }
+    }
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48rem 43rem;
+    gap: 24rem;    
+    &__title {
+        @include text($ff-titles, 28rem, 38rem, 600, $color-white); 
+        letter-spacing: -0.75rem; 
+        @include mobile-576{
+            @include text($ff-titles, 24rem, 33rem, 700, $color-white);            
+        }
+    }
+    &__desc {
+        @include text($ff-titles, 20rem, 28rem, 400, $color-text);        
+        letter-spacing: -0.5rem;
+        max-width: 299rem;
+        @include mobile-576{
+            @include text($ff-titles, 16rem, 28rem, 400, $color-white); 
+            max-width: 269rem;
+        }
+    }
+    img {
+        max-width: 69rem;
+    } 
+}  
+
