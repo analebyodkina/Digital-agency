@@ -21,7 +21,8 @@
 }
 .nav {
     flex-grow: 1;
-    &__ul { 
+    &__ul {
+        position: relative; 
         display: flex;       
         align-items: center;
         flex-grow: 1;
@@ -31,7 +32,7 @@
             @include text ($ff, 18rem, 25rem, 400, $color-text);            
             transition: $transition;
             @include press;
-            &:not(.btn):hover {
+            &:not(.button):hover {
                 color: $color-primary;
             }
         }        
@@ -53,13 +54,5 @@
     }
     .icon-close {
         display: none;
-
-    }
-    &__btn {        
-        background: transparent;        
-        padding: 11rem 42rem;
-        border: 1px solid $color-white;
-        backdrop-filter: blur(1px);
-
-    }
+    }   
 }
