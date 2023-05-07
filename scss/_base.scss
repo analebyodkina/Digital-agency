@@ -60,3 +60,6 @@ button {
         @include text($ff, 16rem, 24rem, 400, $color-text);
     }
 }
+header, section, footer {
+    border-bottom: 1px solid yellow;
+}

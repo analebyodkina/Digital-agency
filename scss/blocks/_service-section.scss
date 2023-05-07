@@ -1,7 +1,7 @@
 .service-section {
-    margin-bottom: 150rem;
+   padding-bottom: 150rem;
     @include tablet-992 {
-        margin-bottom: 140rem;
+        padding-bottom: 140rem;
     }
     &__row {
         display: grid;

@@ -8,6 +8,16 @@
     @include tablet-992 {
         flex-direction: column;
     }
+    animation: fade-in 2.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}  
 	&__title {
         @include text($ff-titles, 80rem, 84rem, 700, $color-white);
         max-width: 582rem;    

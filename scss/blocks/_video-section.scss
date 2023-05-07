@@ -1,7 +1,7 @@
 .video-section {
-    margin-bottom: 150rem;
+    padding-bottom: 150rem;
     @include tablet-992 {
-        margin-bottom: 140rem;
+        padding-bottom: 140rem;
     }
     &__info {
         display: flex;
@@ -18,4 +18,47 @@
             max-width: 327rem;            
         }        
     }
+    &__image {
+        position: relative; 
+    }
+    &__play {      
+        display: inline-block;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 124rem;
+        border-radius: 50%;
+        transition: $transition;
+        &:hover {
+            box-shadow: $color-primary 5px 5px 30px;             
+        }
+        svg {
+            @include mobile-576 {
+                max-width: 40rem;
+                max-height: 40rem;   
+            }
+            &:active {
+                animation: scale-down-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both normal;                
+            }
+            @keyframes scale-down-center {
+                0% {
+                  -webkit-transform: scale(1);
+                          transform: scale(1);
+                }
+                100% {
+                  -webkit-transform: scale(0.9);
+                          transform: scale(0.9);
+                }
+              } 
+        }        
+        @include mobile-576 {
+            max-width: 40rem;
+            max-height: 40rem;   
+        }    
+    }
 }
+
+
+
