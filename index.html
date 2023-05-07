@@ -27,7 +27,7 @@
 				<li class="nav__li"><a href="#services">Services</a></li>				
 				<li class="nav__li"><a href="#projects">Our Projects</a></li>
 				<li class="nav__li"><a href="#about-us">About us</a></li>
-				<li class="nav__li"><a href="#" class="nav__button">Contact us</a></li>				
+				<li class="nav__li"><a href="#" class="nav__button" onclick="popup(this)">Contact us</a></li>				
 				<span class="material-symbols-outlined icon-close" id="close" onclick="navToggle()">close</span>				
 			</ul>
 		</nav>
@@ -45,11 +45,10 @@
 			<div class="desc main-section__desc">
 			Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.
 			</div>
-			<a href="#" class="btn main-section__btn">Our Services
-			<!-- <span><img src="img/icons/arrow-icon.svg" alt="arrow"></span> -->
-			<span><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z" fill="white"/>
-				</svg>
+			<a href="#" class="btn main-section__btn">Our Services			
+				<span><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z" fill="white"/>
+					</svg>
 				</span>
 			</a> 
 		</div>		
@@ -72,14 +71,11 @@
 			<a href="#"><img src="img/video.png" alt="video"></a>
 			<a href="#" class="video-section__play">				
 				<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M62 124C96.2417 124 124 96.2417 124 62C124 27.7583 96.2417 0 62 0C27.7583 0 0 27.7583 0 62C0 96.2417 27.7583 124 62 124Z" fill="#5454D4"/>
-					<path d="M71.74 61.565L52.7661 51.0653C52.6074 50.9773 52.4126 50.9783 52.2548 51.0679C52.0969 51.1575 51.9999 51.3222 52 51.5003V72.4997C51.9999 72.6778 52.0969 72.8425 52.2548 72.9321C52.4126 73.0217 52.6074 73.0227 52.7661 72.9347L71.74 62.435C71.9007 62.3462 72 62.1801 72 62C72 61.8199 71.9007 61.6538 71.74 61.565Z" fill="white"/>
-					</svg>
-					
-					
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M62 124C96.2417 124 124 96.2417 124 62C124 27.7583 96.2417 0 62 0C27.7583 0 027.7583 0 62C0 96.2417 27.7583 124 62 124Z" fill="#5454D4"/>
+				<path d="M71.74 61.565L52.7661 51.0653C52.6074 50.9773 52.4126 50.9783 52.2548 51.0679C52.0969 51.1575 51.9999 51.3222 52 515003V72.4997C51.9999 72.6778 52.0969 72.8425 52.2548 72.9321C52.4126 73.0217 52.6074 73.0227 52.7661 72.9347L71.74 62.435C719007 62.3462 72 62.1801 72 62C72 61.8199 71.9007 61.6538 71.74 61.565Z" fill="white"/>
+				</svg>
 			</a>      
-		</div>		
-		
+		</div>
 	</section>
 
 	<section class="service-section container">
@@ -166,9 +162,23 @@
 			<h2 class="title contact-section__title">
 				Contact us for the service you want to use
 			</h2>			
-			<a href="#" class="btn contact-section__btn">Contact us</a> 
+			<a href="#" class="btn contact-section__btn" onclick="popup(this)">Contact us</a> 
 		</div>
-	</section>		
+	</section>
+	
+	<div class="pop-up" id="popUp">
+		<div class="pop-up__container">
+			<div class="pop-up__body">
+				<h2 class="pop-up__title">Subscribe</h2>
+				<form>
+					<input type="text" placeholder="Enter your name">
+					<input type="email" placeholder="Enter your email">
+					<button type="submit" class="btn">fgfdgf</button>						
+				</form>
+				<div class="pop-up__close" id="closePopUp">&#10006</div>
+			</div>
+		</div>
+	</div>
 
 
 	<footer class="footer container">

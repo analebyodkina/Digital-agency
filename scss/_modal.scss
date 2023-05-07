@@ -1,0 +1,71 @@
+.pop-up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);    
+    transition: .3s all ease-in-out;   
+    transform: scale(0);
+	overflow: hidden;
+	z-index: 9999;    
+    &__container {
+        display: flex;
+		align-items: center;
+		justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    &__body {        
+        width: 500rem;		
+        background: $color-white;
+        text-align: center;
+        padding: 8rem 5rem;
+        position: relative;
+        border-radius: 10rem;
+		@include mobile-576 {
+			width: 310rem;
+			padding: 30rem;
+		}
+    }
+    &__title {
+        @include text ($ff, 700, 36rem, 46rem, $contact-bg);
+        margin-bottom: 25px;
+		@include mobile-576 {
+			@include text ($ff, 700, 24rem, 29rem, $contact-bg);
+		}
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    input {
+        border: 0;
+        outline: 0;
+        padding: 15rem;
+        background-color: rgba($color-primary, 0.2);
+        border-radius: 33rem;
+        @include text ($ff, 700, 1.6rem, 1.9rem, $contact-bg);
+		&::placeholder {
+			color: $color-white;
+		}
+    }
+    button { 
+		border: none;    
+		outline: none;
+		border-radius: 33rem;   
+        cursor: pointer;
+		    
+    }
+    &__close {
+        font-size: 20rem;
+        position: absolute;
+        top: 20rem;
+        right: 20rem;
+        cursor: pointer;
+    }
+}
+.pop-up.active {
+    transform: scale(100%);
+}
