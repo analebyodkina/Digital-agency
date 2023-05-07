@@ -29,10 +29,10 @@
 		}
     }
     &__title {
-        @include text ($ff, 700, 36rem, 46rem, $contact-bg);
+        @include text ($ff, 36rem, 46rem, 700, $contact-bg);
         margin-bottom: 25px;
 		@include mobile-576 {
-			@include text ($ff, 700, 24rem, 29rem, $contact-bg);
+			@include text ($ff, 24rem, 29rem, 700, $contact-bg);
 		}
     }
     form {
@@ -46,7 +46,7 @@
         padding: 15rem;
         background-color: rgba($color-primary, 0.2);
         border-radius: 33rem;
-        @include text ($ff, 700, 1.6rem, 1.9rem, $contact-bg);
+        @include text ($ff, 16rem, 19rem, 700, $contact-bg);
 		&::placeholder {
 			color: $color-white;
 		}
@@ -64,6 +64,7 @@
         top: 20rem;
         right: 20rem;
         cursor: pointer;
+        color: $color-bg;
     }
 }
 .pop-up.active {

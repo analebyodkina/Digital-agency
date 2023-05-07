@@ -16,7 +16,7 @@
 	<link rel="stylesheet"  href="css/owl.theme.default.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>			
+<body id="body">			
 	<header class="header container">
 		<a href="#" class="header__logo">
 			<img src="img/icons/logo.png" alt="logo">
@@ -27,13 +27,15 @@
 				<li class="nav__li"><a href="#services">Services</a></li>				
 				<li class="nav__li"><a href="#projects">Our Projects</a></li>
 				<li class="nav__li"><a href="#about-us">About us</a></li>
-				<li class="nav__li"><a href="#" class="nav__button" onclick="popup(this)">Contact us</a></li>				
-				<span class="material-symbols-outlined icon-close" id="close" onclick="navToggle()">close</span>				
+				<li class="nav__li"><a href="#" class="nav__button" onclick="popup(this)">Contact us</a>
+				</li>
 			</ul>
 		</nav>
-		<div class="header__burger" onclick="navToggle()">
-			<span><img src="img/icons/menu-icon.svg" alt="menu"></span>
-			
+		<div class="header__burger" id="hamburger" onclick="navToggle()">						
+			<span class="line"></span>
+			<span class="line"></span>
+			<span class="line"></span>			  
+		</div>			
 	</header>
 
 
@@ -175,7 +177,9 @@
 					<input type="email" placeholder="Enter your email">
 					<button type="submit" class="btn">fgfdgf</button>						
 				</form>
-				<div class="pop-up__close" id="closePopUp">&#10006</div>
+				<div class="pop-up__close" id="closePopUp">
+					<span class="material-symbols-outlined">close</span>					
+				</div>
 			</div>
 		</div>
 	</div>
