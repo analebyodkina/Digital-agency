@@ -17,10 +17,10 @@
         height: 100%;
     }
     &__body {        
-        width: 500rem;		
+        width: 500rem;
+        padding: 40rem;		
         background: $color-white;
-        text-align: center;
-        padding: 8rem 5rem;
+        text-align: center;        
         position: relative;
         border-radius: 10rem;
 		@include mobile-576 {
@@ -74,54 +74,72 @@
         pointer-events: none;
         transition: all 0.2s ease;
     }
+    &__footer {
+        @include flex-between;
+        margin-top: 30rem;
+    }
+    &__text {
+        @include text($ff, 18rem, 24rem, 700, $contact-bg);
+    }
+    &__socials {
+        display: flex;        
+        gap: 12px;        
+        a {
+            display: inline-block;
+            border-radius: 50%;
+            transition: $transition;            
+            &:hover {
+                transform: scale(1.2);                
+            }
+        }        
+        img {
+            border-radius: 50%;
+            transition: $transition;
+            width: 25rem;          
+           
+        }
+    }
     &__btn {
         padding: 16rem 27rem;
+        cursor: pointer;
         @include text($ff, 20rem, 27rem, 700, $color-white);        
         @include press;
         @include mobile-576 {
             @include text($ff, 16rem, 22rem, 700, $color-white);
             padding: 12rem 21rem; 
         }
+        &:hover {
+            background: darken($color-primary, 10%);
+        }
     }
 }
-
-
-
-
 input:focus ~ label,
 input:valid ~ label {
 	top: -20px;
 	font-size: 12rem;
 	color: $color-primary;
 }
-
 .bar {
 	display: block;
-	position: relative;
-	
+	position: relative;	
 }
-
 .bar:before,
 .bar:after {
 	content: "";
 	height: 2px;
 	width: 0;
-	bottom: 1px;
+	bottom: 0;
 	position: absolute;
 	background: $color-primary;
 	transition: all 0.2s ease;
 }
-
 .bar:before {
 	left: 50%;
 }
-
 .bar:after {
 	right: 50%;
 }
-
 input:focus ~ .bar:before,
 input:focus ~ .bar:after {
 	width: 50%;
 }
-

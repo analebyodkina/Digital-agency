@@ -625,9 +625,9 @@ header, section, footer {
     height: 100%; }
   .pop-up__body {
     width: 500rem;
+    padding: 40rem;
     background: #fff;
     text-align: center;
-    padding: 8rem 5rem;
     position: relative;
     border-radius: 10rem; }
     @media (max-width: 576px) {
@@ -682,8 +682,44 @@ header, section, footer {
   pointer-events: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
+.form__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30rem; }
+.form__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18rem;
+  line-height: 24rem;
+  font-weight: 700;
+  color: rgba(30, 30, 32, 0.5); }
+.form__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px; }
+  .form__socials a {
+    display: inline-block;
+    border-radius: 50%;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+    .form__socials a:hover {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }
+  .form__socials img {
+    border-radius: 50%;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    width: 25rem; }
 .form__btn {
   padding: 16rem 27rem;
+  cursor: pointer;
   font-family: "Nunito Sans", sans-serif;
   font-size: 20rem;
   line-height: 27rem;
@@ -708,6 +744,8 @@ header, section, footer {
       font-weight: 700;
       color: #fff;
       padding: 12rem 21rem; } }
+  .form__btn:hover {
+    background: #3131c4; }
 
 input:focus ~ label,
 input:valid ~ label {
@@ -724,7 +762,7 @@ input:valid ~ label {
   content: "";
   height: 2px;
   width: 0;
-  bottom: 1px;
+  bottom: 0;
   position: absolute;
   background: #5454D4;
   -webkit-transition: all 0.2s ease;
