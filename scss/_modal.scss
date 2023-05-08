@@ -25,39 +25,17 @@
         border-radius: 10rem;
 		@include mobile-576 {
 			width: 310rem;
-			padding: 30rem;
+			padding: 20rem;
 		}
     }
     &__title {
-        @include text ($ff, 36rem, 46rem, 700, $contact-bg);
-        margin-bottom: 25px;
+        @include text ($ff, 36rem, 46rem, 700, $color-primary);
+        margin-bottom: 35rem;
 		@include mobile-576 {
-			@include text ($ff, 24rem, 29rem, 700, $contact-bg);
+			@include text ($ff, 24rem, 29rem, 700, $color-primary);
 		}
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    input {
-        border: 0;
-        outline: 0;
-        padding: 15rem;
-        background-color: rgba($color-primary, 0.2);
-        border-radius: 33rem;
-        @include text ($ff, 16rem, 19rem, 700, $contact-bg);
-		&::placeholder {
-			color: $color-white;
-		}
-    }
-    button { 
-		border: none;    
-		outline: none;
-		border-radius: 33rem;   
-        cursor: pointer;
-		    
-    }
+    }    
+    
     &__close {
         font-size: 20rem;
         position: absolute;
@@ -70,3 +48,80 @@
 .pop-up.active {
     transform: scale(100%);
 }
+.form {
+    &__group {
+        position: relative;
+        margin-bottom: 45rem;
+    }
+    &__input {
+        display: block;	
+        font-size: 18rem;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        &:focus {
+            outline: none;
+        }
+    }
+    label {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        color: #999;
+        font-size: 18rem;
+        font-weight: normal;
+        pointer-events: none;
+        transition: all 0.2s ease;
+    }
+    &__btn {
+        padding: 16rem 27rem;
+        @include text($ff, 20rem, 27rem, 700, $color-white);        
+        @include press;
+        @include mobile-576 {
+            @include text($ff, 16rem, 22rem, 700, $color-white);
+            padding: 12rem 21rem; 
+        }
+    }
+}
+
+
+
+
+input:focus ~ label,
+input:valid ~ label {
+	top: -20px;
+	font-size: 12rem;
+	color: $color-primary;
+}
+
+.bar {
+	display: block;
+	position: relative;
+	
+}
+
+.bar:before,
+.bar:after {
+	content: "";
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: $color-primary;
+	transition: all 0.2s ease;
+}
+
+.bar:before {
+	left: 50%;
+}
+
+.bar:after {
+	right: 50%;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+	width: 50%;
+}
+

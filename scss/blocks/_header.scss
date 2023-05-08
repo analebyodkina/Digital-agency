@@ -51,46 +51,5 @@
         @include tablet-992 {
             color: $color-text;
         }
-    }
-    // .icon-close {
-    //     display: none;
-    // }
+    }    
 }  
-.header__burger {
-    position: relative;
-    z-index: 100;
-}
-.header__burger .line{
-    width: 40rem;
-    height: 4rem;
-    border-radius: 2rem;
-    background-color: $color-white;
-    display: block;
-    margin: 8rem auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-  
-.header__burger:hover{
-    cursor: pointer;
-  }
-  #hamburger.is-active .line:nth-child(2){
-    opacity: 0;
-  }
-  
-  #hamburger.is-active .line:nth-child(1){
-    -webkit-transform: translateY(9px) rotate(45deg);
-    -ms-transform: translateY(9px) rotate(45deg);
-    -o-transform: translateY(9px) rotate(45deg);
-    transform: translateY(9px) rotate(45deg);
-    background-color: $color-text;
-  }
-  
-  #hamburger.is-active .line:nth-child(3){
-    -webkit-transform: translateY(-14px) rotate(-45deg);
-    -ms-transform: translateY(-14px) rotate(-45deg);
-    -o-transform: translateY(-14px) rotate(-45deg);
-    transform: translateY(-14px) rotate(-45deg);
-    background-color: $color-text;
-  }

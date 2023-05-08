@@ -18,7 +18,7 @@ function navToggle() {
   // карусель
   $('.owl-carousel').owlCarousel({    
     lazyLoad:true,
-    loop:false,
+    loop:true,
     margin:24,
     responsiveClass:true,
     responsive : {

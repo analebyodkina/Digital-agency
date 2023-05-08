@@ -1,0 +1,23 @@
+.owl-item.active {
+
+
+    &:first-child{ 
+        transform: translateY(0);
+    }
+
+    &:nth-child(3n+3) {
+        transform: translateY(0);
+    }
+
+    &:nth-child(3n+2){
+        transform: translateY(58rem);
+    }
+    &:nth-child(3n){
+        transform: translateY(116rem);
+    }
+}
+.owl-carousel .owl-stage-outer {
+    overflow-x: hidden;
+    // overflow-y: initial;    
+    height: 417rem;
+}

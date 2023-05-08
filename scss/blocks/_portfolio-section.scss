@@ -10,22 +10,36 @@
             @include text($ff, 36rem, 54rem, 700, $color-white);
         }
     }
+    &__list {
+        transition: $transition;
+    }
     &__item {
         background: #1E1E20;
         border-radius: 14rem;
         padding: 24rem;
     }
 }
-.owl-item.active {
-    transform: translateY(58rem);
-    &:first-child {
-        transform: translateY(0);
-    }
-    &:last-child {
-        transform: translateY(116rem);
-    }
-}
-.owl-carousel .owl-stage-outer {
-    overflow-x: hidden;    
-    height: 467rem;
-}
+
+// .owl-item.active {
+
+
+//     &:first-child{ 
+//         transform: translateY(0);
+//     }
+
+//     &:nth-child(3n+3) {
+//         transform: translateY(0);
+//     }
+
+//     &:nth-child(3n+2){
+//         transform: translateY(58rem);
+//     }
+//     &:nth-child(3n){
+//         transform: translateY(116rem);
+//     }
+// }
+// .owl-carousel .owl-stage-outer {
+//     overflow-x: hidden;
+//     // overflow-y: initial;    
+//     height: 417rem;
+// }
