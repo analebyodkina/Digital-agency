@@ -60,18 +60,18 @@
 
     }
     &__title {        
-        @include text($ff-titles, 28rem, 38rem, 600, $color-white); 
+        @include text($ff, 28rem, 38rem, 600, $color-white); 
         letter-spacing: -0.75rem; 
         @include mobile-576{
-            @include text($ff-titles, 24rem, 33rem, 700, $color-white);            
+            @include text($ff, 24rem, 33rem, 700, $color-white);            
         }
     }
     &__desc {
-        @include text($ff-titles, 20rem, 28rem, 400, $color-text);        
+        @include text($ff, 20rem, 28rem, 400, $color-text);        
         letter-spacing: -0.5rem;
         max-width: 299rem;
         @include mobile-576{
-            @include text($ff-titles, 16rem, 28rem, 400, $color-white); 
+            @include text($ff, 16rem, 28rem, 400, $color-white); 
             max-width: 269rem;
         }
     }

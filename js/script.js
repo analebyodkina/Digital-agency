@@ -20,19 +20,19 @@ function navToggle() {
     lazyLoad:true,
     loop:true,
     margin:24,
-    responsiveClass:true,
+    // responsiveClass:true,
     responsive : {
       // breakpoint from 0 up
       0 : {
-          items:1
-      },
-      // breakpoint from 480 up
+          items:1,
+          nav: true
+      },      
       576 : {
-          items:2
-          
+          items:2, 
+          nav: false        
       },
-      // breakpoint from 768 up
-      768 : {
+      // breakpoint from 992 up
+      992 : {
         items:3
       }
     }
