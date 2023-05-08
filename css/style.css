@@ -838,13 +838,16 @@ input:focus ~ .bar:after {
           animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   @media (max-width: 992px) {
     .main-section {
-      margin-bottom: 75rem; } }
-  @media (max-width: 992px) {
-    .main-section {
+      margin-bottom: 75rem;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
+  @media (max-width: 576px) {
+    .main-section {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
@@ -875,8 +878,7 @@ input:focus ~ .bar:after {
     margin-top: 24rem; }
     @media (max-width: 576px) {
       .main-section__desc {
-        margin-top: 30rem;
-        max-width: 327rem; } }
+        margin-top: 30rem; } }
   .main-section__btn {
     padding: 16rem 27rem;
     font-family: "Nunito Sans", sans-serif;
@@ -1001,7 +1003,8 @@ input:focus ~ .bar:after {
     margin-bottom: 98rem; }
     @media (max-width: 576px) {
       .service-section__title {
-        max-width: 327rem; } }
+        max-width: 327rem;
+        margin-bottom: 50rem; } }
 
 .card__item {
   display: -webkit-box;
@@ -1069,7 +1072,7 @@ input:focus ~ .bar:after {
       font-size: 16rem;
       line-height: 28rem;
       font-weight: 400;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.7);
       max-width: 269rem; } }
 .card__icon {
   border-radius: 50%; }

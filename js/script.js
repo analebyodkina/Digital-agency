@@ -6,6 +6,14 @@ function navToggle() {
     document.getElementById("body").classList.toggle("overflow-hidden");
   }
 
+  function hideBurger() {
+    document.getElementById("headerUl").classList.remove("active"); 
+    document.getElementById("html").classList.remove("overflow-hidden");
+    document.getElementById("body").classList.remove("overflow-hidden"); 
+    // Remove the class "is-active" from the burger button
+    $(".header__burger").removeClass("is-active");  
+  }
+
 
   // функция крутит кнопку бургера
   $(document).ready(function(){
@@ -52,6 +60,8 @@ function popup(){
       document.getElementById('headerUl').classList.remove("active");
       document.getElementById("html").classList.add("overflow-hidden");
       document.getElementById("body").classList.add("overflow-hidden");
+      // Remove the class "is-active" from the burger button
+      $(".header__burger").removeClass("is-active"); 
       popUp.classList.add('active');
       return false;
 }
@@ -59,13 +69,13 @@ function popup(){
 popUp.addEventListener('click', function(){
     popUp.classList.remove('active');
     document.getElementById("html").classList.remove("overflow-hidden");
-    document.getElementById("body").classList.remove("overflow-hidden");
+    document.getElementById("body").classList.remove("overflow-hidden");    
 });
 const closePopUp = document.getElementById('closePopUp');
 closePopUp.addEventListener('click', () => {
     popUp.classList.remove('active');
     document.getElementById("html").classList.remove("overflow-hidden");
-    document.getElementById("body").classList.remove("overflow-hidden");
+    document.getElementById("body").classList.remove("overflow-hidden");    
 });
 
 popUp.querySelector('.pop-up__body').addEventListener('click', function(event){  

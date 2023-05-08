@@ -4,9 +4,11 @@
     margin-bottom: 151rem;
     @include tablet-992 {
         margin-bottom: 75rem;
-    }
-    @include tablet-992 {
         flex-direction: column;
+    }
+    @include mobile-576 {
+        align-items: flex-start;
+        
     }
     animation: fade-in 2.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
@@ -31,7 +33,7 @@
         margin-top: 24rem;
         @include mobile-576 {
             margin-top: 30rem;
-            max-width: 327rem;
+            // max-width: 327rem;
         }
 	}    
 	&__btn {
