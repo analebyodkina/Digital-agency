@@ -29,12 +29,14 @@ function navToggle() {
       },      
       576 : {
           items:2, 
-          nav: false        
+          nav: true       
       },
-      // breakpoint from 992 up
+      // breakpoint from 992 up      
       992 : {
-        items:3
+        items:3,
+        nav: false
       }
+
     }
 });
 

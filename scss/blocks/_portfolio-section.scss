@@ -1,17 +1,26 @@
 .portfolio-section {
     padding-bottom: 168rem;
-    @include mobile-576 {
-        margin-bottom: 140rem;
+    @include tablet-small-768 {
+        padding-bottom: 140rem;
     }
     &__title {
         @include text($ff, 58rem, 79rem, 800, $color-white);
         margin-bottom: 70rem;
         @include mobile-576 {
             @include text($ff, 36rem, 54rem, 700, $color-white);
+            max-width: 327rem;
+            margin-bottom: 50rem;
         }
     }
     &__list {
         transition: $transition;
+        height: 483rem;
+        padding-bottom: 50rem;
+        @include tablet-992 {
+            height: unset;
+            padding-bottom: 0;
+
+        }
     }
     &__item {
         background: #1E1E20;

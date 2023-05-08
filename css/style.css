@@ -740,30 +740,32 @@ input:focus ~ .bar:before,
 input:focus ~ .bar:after {
   width: 50%; }
 
-.owl-item.active:first-child {
-  -webkit-transform: translateY(0);
-          transform: translateY(0); }
-.owl-item.active:nth-child(3n+3) {
-  -webkit-transform: translateY(0);
-          transform: translateY(0); }
-.owl-item.active:nth-child(3n+2) {
-  -webkit-transform: translateY(58rem);
-          transform: translateY(58rem); }
-.owl-item.active:nth-child(3n) {
-  -webkit-transform: translateY(116rem);
-          transform: translateY(116rem); }
-
+@media (min-width: 992px) {
+  .owl-item.active:first-child {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .owl-item.active:nth-child(3n+3) {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .owl-item.active:nth-child(3n+2) {
+    -webkit-transform: translateY(58rem);
+            transform: translateY(58rem); }
+  .owl-item.active:nth-child(3n) {
+    -webkit-transform: translateY(116rem);
+            transform: translateY(116rem); } }
 .owl-carousel .owl-stage-outer {
   overflow-x: hidden;
-  height: 417rem; }
+  height: 483rem;
+  padding-bottom: 50rem; }
   @media (max-width: 992px) {
     .owl-carousel .owl-stage-outer {
-      height: auto; } }
-  @media (max-width: 576px) {
-    .owl-carousel .owl-stage-outer {
-      height: 417rem; } }
+      height: unset;
+      padding-bottom: 0; } }
 
-@media (max-width: 576px) {
+.owl-theme .owl-nav {
+  margin-top: 50rem; }
+
+@media (max-width: 992px) {
   .owl-dots {
     display: none; } }
 
@@ -1079,9 +1081,9 @@ input:focus ~ .bar:after {
 
 .portfolio-section {
   padding-bottom: 168rem; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .portfolio-section {
-      margin-bottom: 140rem; } }
+      padding-bottom: 140rem; } }
   .portfolio-section__title {
     font-family: "Nunito Sans", sans-serif;
     font-size: 58rem;
@@ -1095,10 +1097,18 @@ input:focus ~ .bar:after {
         font-size: 36rem;
         line-height: 54rem;
         font-weight: 700;
-        color: #fff; } }
+        color: #fff;
+        max-width: 327rem;
+        margin-bottom: 50rem; } }
   .portfolio-section__list {
     -webkit-transition: 0.3s all ease-in-out;
-    transition: 0.3s all ease-in-out; }
+    transition: 0.3s all ease-in-out;
+    height: 483rem;
+    padding-bottom: 50rem; }
+    @media (max-width: 992px) {
+      .portfolio-section__list {
+        height: unset;
+        padding-bottom: 0; } }
   .portfolio-section__item {
     background: #1E1E20;
     border-radius: 14rem;

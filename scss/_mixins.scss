@@ -50,3 +50,9 @@
   }
 }
 
+@mixin min-tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
