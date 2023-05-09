@@ -314,6 +314,11 @@ template {
 html {
   font-size: 1px; }
 
+.wrapper {
+  max-width: 1920rem;
+  position: relative;
+  margin-inline: auto; }
+
 .container {
   max-width: 1235rem;
   padding: 0 15rem;
@@ -325,7 +330,8 @@ html {
 body {
   font-family: "Nunito Sans", sans-serif;
   background: #19191B;
-  color: #fff; }
+  color: #fff;
+  overflow-x: hidden; }
 
 .overflow-hidden {
   overflow-y: hidden; }
@@ -389,6 +395,21 @@ button {
 
 header, section, footer {
   border-bottom: 1px solid yellow; }
+
+.blur__top-left {
+  position: absolute;
+  width: 467rem;
+  height: 1234rem;
+  left: 281rem;
+  top: -181rem;
+  z-index: -10;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(84, 84, 212, 0.27)), to(rgba(84, 84, 212, 0.1134)));
+  background: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.1134) 100%);
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
+  border-radius: 233.5rem;
+  -webkit-transform: rotate(-54.37deg);
+          transform: rotate(-54.37deg); }
 
 @font-face {
   font-family: 'Graphic';

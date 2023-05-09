@@ -15,225 +15,224 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body id="body">
-	
-	<div class="spinner" id="spinner">
-		<div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-	</div>
-
-
-	<header class="header container">
-		<a href="#" class="header__logo">
-			<img src="img/icons/logo.png" alt="logo">
-		</a>
-		<nav class="header__nav nav">					
-			<ul class="nav__ul" id="headerUl">
-				<li class="nav__li"><a href="#" class="active" onclick="hideBurger()">Home</a></li>
-				<li class="nav__li"><a href="#services" onclick="hideBurger()">Services</a></li>				
-				<li class="nav__li"><a href="#projects" onclick="hideBurger()">Our Projects</a></li>
-				<li class="nav__li"><a href="#about-us" onclick="hideBurger()">About us</a></li>
-				<li class="nav__li"><a href="#" class="nav__button" onclick="popup(this)">Contact us</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="header__burger" id="hamburger" onclick="navToggle()">						
-			<span class="line"></span>
-			<span class="line"></span>
-			<span class="line"></span>			  
-		</div>			
-	</header>
-
-	<section class="main-section container">
-		<div class="main-section__info">
-			<h1 class="main-section__title">
-			Build Your Awesome Platform
-			</h1>
-			<div class="desc main-section__desc">
-			Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.
-			</div>
-			<a href="#services" class="btn main-section__btn">Our Services			
-				<span><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z" fill="white"/>
-					</svg>
-				</span>
-			</a> 
-		</div>		
-		<div class="main-section__image">
-			<img src="img/user.png" alt="user image"/>
-			<div></div>       
-		</div>			
-	</section>
-
-	<section class="video-section container">
-		<a name="about-us"></a>
-		<div class="video-section__info">
-			<h2 class="title video-section__title">
-				Why Enver Is The Best Choice?
-			</h2>
-			<div class="desc video-section__desc">
-				Watch this one minute video so you understand why you should use our services!
-			</div>			 
-		</div>		
-		<div class="video-section__image">			
-			<a onclick="checkSpinner()"><img src="img/video.png" alt="video"></a>
-			<a onclick="checkSpinner()" class="video-section__play">				
-				<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M62 124C96.2417 124 124 96.2417 124 62C124 27.7583 96.2417 0 62 0C27.7583 0 0 27.7583 0 62C0 96.2417 27.7583 124 62 124Z" fill="#5454D4"/>
-					<path d="M71.74 61.565L52.7661 51.0653C52.6074 50.9773 52.4126 50.9783 52.2548 51.0679C52.0969 51.1575 51.9999 51.3222 52 51.5003V72.4997C51.9999 72.6778 52.0969 72.8425 52.2548 72.9321C52.4126 73.0217 52.6074 73.0227 52.7661 72.9347L71.74 62.435C71.9007 62.3462 72 62.1801 72 62C72 61.8199 71.9007 61.6538 71.74 61.565Z" fill="white"/>
-					</svg>
-					
-			</a>      
+	<div class="wrapper">
+		<div class="spinner" id="spinner">
+			<div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 		</div>
-	</section>
-
-	<section class="service-section container">
-		<a name="services"></a>
-		<h2 class="title service-section__title">The Service We Provide For You</h2>
-		
-		<div class="service-section__row card">
-			<div class="card__item _blue">
-				<div class="card__icon">
-					<img src="img/icons/service-icon1.svg" alt="service-icon">
-				</div>				
-				<h3 class="card__title">Development</h3>
-				<div class="card__desc">Create a platform with the best and coolest quality from us.</div>
-			</div>
-			<div class="card__item _red">
-				<div class="card__icon">
-					<img src="img/icons/service-icon2.svg" alt="service-icon">
-				</div>				
-				<h3 class="card__title">UI/UX Designer</h3>
-				<div class="card__desc">We provide UI/UX Design services, and of course with the best quality</div>
-			</div>
-			<div class="card__item _yellow">
-				<div class="card__icon">
-					<img src="img/icons/service-icon3.svg" alt="service-icon">
-				</div>
-				<h3 class="card__title">Graphik Designer</h3>
-				<div class="card__desc">We provide Graphic Design services, with the best designers</div>
-			</div>
-			<div class="card__item _yellow">
-				<div class="card__icon">
-					<img src="img/icons/service-icon4.svg" alt="service-icon">
-				</div>
-				<h3 class="card__title">Motion Graphik</h3>
-				<div class="card__desc">Create a platform with the best and coolest quality from us.</div>
-			</div>
-			<div class="card__item _blue">
-				<div class="card__icon">
-					<img src="img/icons/service-icon5.svg" alt="service-icon">
-				</div>
-				<h3 class="card__title">Photography</h3>
-				<div class="card__desc">We provide Photography services, and of course with the best quality</div>
-			</div>
-			<div class="card__item _red">
-				<div class="card__icon">
-					<img src="img/icons/service-icon6.svg" alt="service-icon">
-				</div>
-				<h3 class="card__title">Videography</h3>
-				<div class="card__desc">Create a platform with the best and coolest quality from us.</div>
+		<div class="blur">
+			<div class="blur__top-left"></div>
+		</div>
+	
+		<header class="header container">
+			<a href="#" class="header__logo">
+				<img src="img/icons/logo.png" alt="logo">
+			</a>
+			<nav class="header__nav nav">					
+				<ul class="nav__ul" id="headerUl">
+					<li class="nav__li"><a href="#" class="active" onclick="hideBurger()">Home</a></li>
+					<li class="nav__li"><a href="#services" onclick="hideBurger()">Services</a></li>				
+					<li class="nav__li"><a href="#projects" onclick="hideBurger()">Our Projects</a></li>
+					<li class="nav__li"><a href="#about-us" onclick="hideBurger()">About us</a></li>
+					<li class="nav__li"><a href="#" class="nav__button" onclick="popup(this)">Contact us</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__burger" id="hamburger" onclick="navToggle()">						
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>			  
 			</div>			
+		</header>
+	
+		<section class="main-section container">
+			<div class="main-section__info">
+				<h1 class="main-section__title">
+				Build Your Awesome Platform
+				</h1>
+				<div class="desc main-section__desc">
+				Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.
+				</div>
+				<a href="#services" class="btn main-section__btn">Our Services			
+					<span><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 1.5C2 0.947715 2.44772 0.5 3 0.5L11 0.500001C11.5523 0.500001 12 0.947716 12 1.5V9.5C12 10.0523 11.5523 10.5 11 10.5C10.4477 10.5 10 10.0523 10 9.5V3.91421L1.70711 12.2071C1.31658 12.5976 0.683417 12.5976 0.292893 12.2071C-0.0976311 11.8166 -0.0976311 11.1834 0.292893 10.7929L8.58579 2.5L3 2.5C2.44772 2.5 2 2.05228 2 1.5Z" fill="white"/>
+						</svg>
+					</span>
+				</a> 
+			</div>		
+			<div class="main-section__image">
+				<img src="img/user.png" alt="user image"/>
+				<div></div>       
+			</div>			
+		</section>
+	
+		<section class="video-section container">
+			<a name="about-us"></a>
+			<div class="video-section__info">
+				<h2 class="title video-section__title">
+					Why Enver Is The Best Choice?
+				</h2>
+				<div class="desc video-section__desc">
+					Watch this one minute video so you understand why you should use our services!
+				</div>			 
+			</div>		
+			<div class="video-section__image">			
+				<a onclick="checkSpinner()"><img src="img/video.png" alt="video"></a>
+				<a onclick="checkSpinner()" class="video-section__play">				
+					<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M62 124C96.2417 124 124 96.2417 124 62C124 27.7583 96.2417 0 62 0C27.7583 0 0 27.7583 0 62C0 96.2417 27.7583 124 62 124Z" fill="#5454D4"/>
+						<path d="M71.74 61.565L52.7661 51.0653C52.6074 50.9773 52.4126 50.9783 52.2548 51.0679C52.0969 51.1575 51.9999 51.3222 52 51.5003V72.4997C51.9999 72.6778 52.0969 72.8425 52.2548 72.9321C52.4126 73.0217 52.6074 73.0227 52.7661 72.9347L71.74 62.435C71.9007 62.3462 72 62.1801 72 62C72 61.8199 71.9007 61.6538 71.74 61.565Z" fill="white"/>
+						</svg>
+						
+				</a>      
+			</div>
+		</section>
+	
+		<section class="service-section container">
+			<a name="services"></a>
+			<h2 class="title service-section__title">The Service We Provide For You</h2>
 			
-		</div>
-	</section>
-
-	<section class="portfolio-section container">
-		<a name="projects"></a>
-		<h2 class="portfolio-section__title">
-			Our Awesome Portofolio
-		</h2>
-		<div class="portfolio-section__list">
-			<div class="owl-carousel owl-theme portfolio-section__carousel">
-				<div class="portfolio-section__item item">
-					<img src="img/portfolio1.png" alt="portfolio-item">
+			<div class="service-section__row card">
+				<div class="card__item _blue">
+					<div class="card__icon">
+						<img src="img/icons/service-icon1.svg" alt="service-icon">
+					</div>				
+					<h3 class="card__title">Development</h3>
+					<div class="card__desc">Create a platform with the best and coolest quality from us.</div>
 				</div>
-				<div class="portfolio-section__item item">
-					<img src="img//portfolio2.png" alt="portfolio-item">
+				<div class="card__item _red">
+					<div class="card__icon">
+						<img src="img/icons/service-icon2.svg" alt="service-icon">
+					</div>				
+					<h3 class="card__title">UI/UX Designer</h3>
+					<div class="card__desc">We provide UI/UX Design services, and of course with the best quality</div>
 				</div>
-				<div class="portfolio-section__item item">
-					<img src="img/portfolio3.png" alt="portfolio-item">
+				<div class="card__item _yellow">
+					<div class="card__icon">
+						<img src="img/icons/service-icon3.svg" alt="service-icon">
+					</div>
+					<h3 class="card__title">Graphik Designer</h3>
+					<div class="card__desc">We provide Graphic Design services, with the best designers</div>
 				</div>
-				<div class="portfolio-section__item item">
-					<img src="img//portfolio2.png" alt="portfolio-item">
+				<div class="card__item _yellow">
+					<div class="card__icon">
+						<img src="img/icons/service-icon4.svg" alt="service-icon">
+					</div>
+					<h3 class="card__title">Motion Graphik</h3>
+					<div class="card__desc">Create a platform with the best and coolest quality from us.</div>
 				</div>
-				<div class="portfolio-section__item item">
-					<img src="img//portfolio2.png" alt="portfolio-item">
+				<div class="card__item _blue">
+					<div class="card__icon">
+						<img src="img/icons/service-icon5.svg" alt="service-icon">
+					</div>
+					<h3 class="card__title">Photography</h3>
+					<div class="card__desc">We provide Photography services, and of course with the best quality</div>
 				</div>
-				<div class="portfolio-section__item item">
-					<img src="img/portfolio3.png" alt="portfolio-item">
-				</div>
-	
+				<div class="card__item _red">
+					<div class="card__icon">
+						<img src="img/icons/service-icon6.svg" alt="service-icon">
+					</div>
+					<h3 class="card__title">Videography</h3>
+					<div class="card__desc">Create a platform with the best and coolest quality from us.</div>
+				</div>			
+				
 			</div>
-
-		</div>
+		</section>
+	
+		<section class="portfolio-section container">
+			<a name="projects"></a>
+			<h2 class="portfolio-section__title">
+				Our Awesome Portofolio
+			</h2>
+			<div class="portfolio-section__list">
+				<div class="owl-carousel owl-theme portfolio-section__carousel">
+					<div class="portfolio-section__item item">
+						<img src="img/portfolio1.png" alt="portfolio-item">
+					</div>
+					<div class="portfolio-section__item item">
+						<img src="img//portfolio2.png" alt="portfolio-item">
+					</div>
+					<div class="portfolio-section__item item">
+						<img src="img/portfolio3.png" alt="portfolio-item">
+					</div>
+					<div class="portfolio-section__item item">
+						<img src="img//portfolio2.png" alt="portfolio-item">
+					</div>
+					<div class="portfolio-section__item item">
+						<img src="img//portfolio2.png" alt="portfolio-item">
+					</div>
+					<div class="portfolio-section__item item">
+						<img src="img/portfolio3.png" alt="portfolio-item">
+					</div>
 		
-	</section>
-
-	<section class="contact-section">
-		<div class="container contact-section__container">
-			<h2 class="title contact-section__title">
-				Contact us for the service you want to use
-			</h2>			
-			<a href="#" class="btn contact-section__btn" onclick="popup(this)">Contact us</a> 
-		</div>
-	</section>
+				</div>
 	
-	<div class="pop-up" id="popUp">
-		<div class="pop-up__container">
-			<div class="pop-up__body">
-				<h3 class="pop-up__title">Contact us</h3>
-				<form action="" class="form pop-up__form">
-					<div class="form__group">
-						<input class="form__input" type="text" name="name" required />
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label for="name">Name</label>
+			</div>
+			
+		</section>
+	
+		<section class="contact-section">
+			<div class="container contact-section__container">
+				<h2 class="title contact-section__title">
+					Contact us for the service you want to use
+				</h2>			
+				<a href="#" class="btn contact-section__btn" onclick="popup(this)">Contact us</a> 
+			</div>
+		</section>
+		
+		<div class="pop-up" id="popUp">
+			<div class="pop-up__container">
+				<div class="pop-up__body">
+					<h3 class="pop-up__title">Contact us</h3>
+					<form action="" class="form pop-up__form">
+						<div class="form__group">
+							<input class="form__input" type="text" name="name" required />
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="name">Name</label>
+						</div>
+						
+						<div class="form__group">
+							<input class="form__input" type="text" name="email" required />
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="email">Email</label>
+						</div>					
+						<button class="btn form__btn">Contact us</button>
+						<div class="form__footer">
+							<div class="form__text">Connect with us on social media!</div>
+							<div class="form__socials">
+								<a href="#"><img src="img/icons/socials/instagram.svg" alt="instagram"></a>
+								<a href="#"><img src="img/icons/socials/twitter.svg" alt="twitter"></a>
+								<a href="#"><img src="img/icons/socials/facebook.svg" alt="facebook"></a>							
+							</div>						
+						</div>
+						
+					</form>
+					<div class="pop-up__close" id="closePopUp">
+						<span class="material-symbols-outlined">close</span>					
 					</div>
-					
-					<div class="form__group">
-						<input class="form__input" type="text" name="email" required />
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label for="email">Email</label>
-					</div>					
-					<button class="btn form__btn">Contact us</button>
-					<div class="form__footer">
-						<div class="form__text">Connect with us on social media!</div>
-						<div class="form__socials">
-							<a href="#"><img src="img/icons/socials/instagram.svg" alt="instagram"></a>
-							<a href="#"><img src="img/icons/socials/twitter.svg" alt="twitter"></a>
-							<a href="#"><img src="img/icons/socials/facebook.svg" alt="facebook"></a>							
-						</div>						
-					</div>
-					
-				</form>
-				<div class="pop-up__close" id="closePopUp">
-					<span class="material-symbols-outlined">close</span>					
 				</div>
 			</div>
 		</div>
+	
+		<footer class="footer container">
+			<a href="#" class="footer__logo">
+				<img src="img/icons/logo.png" alt="logo">
+			</a>
+			<nav>
+				<ul class="footer__ul">
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms and Conditions</a></li>						
+				</ul>
+			</nav>
+			<div class="footer__copyright">
+				© <span id="footer-year"></span> Enver, All Rights Reserved
+			</div>
+			
+		</footer>
+
 	</div>
-
-
-	<footer class="footer container">
-		<a href="#" class="footer__logo">
-			<img src="img/icons/logo.png" alt="logo">
-		</a>
-		<nav>
-			<ul class="footer__ul">
-				<li><a href="#">Support</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Terms and Conditions</a></li>						
-			</ul>
-		</nav>
-		<div class="footer__copyright">
-			© <span id="footer-year"></span> Enver, All Rights Reserved
-		</div>
-		
-	</footer>			
-		
-			
-
-			
 
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
