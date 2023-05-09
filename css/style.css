@@ -1242,7 +1242,52 @@ input:focus ~ .bar:after {
     transition: 0.3s all ease-in-out; }
 
 .portfolio-section {
-  padding-bottom: 168rem; }
+  padding-bottom: 168rem;
+  position: relative; }
+  .portfolio-section::before {
+    content: '';
+    background: url("../../img/decorations/line.svg") 0 0/cover no-repeat;
+    display: inline-block;
+    width: 95rem;
+    height: 28rem;
+    position: absolute;
+    bottom: 140rem;
+    left: -33rem; }
+    @media (max-width: 768px) {
+      .portfolio-section::before {
+        width: 61rem;
+        height: 18rem;
+        left: 33rem;
+        bottom: 77rem; } }
+  .portfolio-section::after {
+    content: '';
+    background: url("../../img/decorations/circles.svg") 0 0/cover no-repeat;
+    display: inline-block;
+    width: 62rem;
+    height: 73rem;
+    position: absolute;
+    top: 43rem;
+    right: 62rem;
+    -webkit-transform: rotate(-27.37deg);
+            transform: rotate(-27.37deg); }
+    @media (max-width: 768px) {
+      .portfolio-section::after {
+        width: 39rem;
+        height: 46rem;
+        -webkit-transform: rotate(-20.89deg);
+                transform: rotate(-20.89deg);
+        top: 51rem;
+        right: 24rem; } }
+  @media (max-width: 992px) {
+    .portfolio-section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 50rem; } }
   @media (max-width: 768px) {
     .portfolio-section {
       padding-bottom: 140rem; } }
@@ -1318,9 +1363,7 @@ input:focus ~ .bar:after {
       height: 28rem;
       position: absolute;
       top: -83rem;
-      right: 37rem;
-      -webkit-transform: rotate(30deg);
-              transform: rotate(30deg); }
+      right: 37rem; }
       @media (max-width: 576px) {
         .contact-section__container::after {
           width: 19rem;

@@ -32,8 +32,7 @@
             height: 28rem;
             position: absolute; 
             top: -83rem;
-            right: 37rem;
-            transform: rotate(30deg);
+            right: 37rem;            
             @include mobile-576 {
                 width: 19rem;
                 height: 19rem;
@@ -65,4 +64,3 @@
         }
     }
 }
-
