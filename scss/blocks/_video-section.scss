@@ -19,7 +19,8 @@
         }        
     }
     &__image {
-        position: relative; 
+        position: relative;
+        cursor: pointer; 
     }
     &__play {      
         display: inline-block;

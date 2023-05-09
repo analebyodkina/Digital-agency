@@ -16,6 +16,7 @@
         transition: $transition;
         height: 483rem;
         padding-bottom: 50rem;
+        cursor: pointer;
         @include tablet-992 {
             height: unset;
             padding-bottom: 0;

@@ -1,4 +1,4 @@
-// функция открывает бургер
+// opens burger menu
 function navToggle() {
     var headerUl = document.getElementById("headerUl");
     headerUl.classList.toggle("active");
@@ -6,6 +6,8 @@ function navToggle() {
     document.getElementById("body").classList.toggle("overflow-hidden");
   }
 
+
+//closes burger for  nav links 
   function hideBurger() {
     document.getElementById("headerUl").classList.remove("active"); 
     document.getElementById("html").classList.remove("overflow-hidden");
@@ -14,8 +16,16 @@ function navToggle() {
     $(".header__burger").removeClass("is-active");  
   }
 
+  //opens spinner
+  function checkSpinner() {
+    document.getElementById("spinner").classList.add("_active");    
+    setTimeout (() => {
+      document.getElementById("spinner").classList.remove("_active"); 
+    }, 3000);
+  }
 
-  // функция крутит кнопку бургера
+
+  // rolls burger button
   $(document).ready(function(){
     $(".header__burger").click(function(){
       $(this).toggleClass("is-active");
@@ -23,7 +33,7 @@ function navToggle() {
   });
 
 
-  // карусель
+  // carousel
   $('.owl-carousel').owlCarousel({    
     lazyLoad:true,
     loop:true,
@@ -49,12 +59,12 @@ function navToggle() {
 });
 
 
-// копирайт
+// copyright
 var currentYear = new Date().getFullYear();
 document.getElementById("footer-year").innerHTML = currentYear;
 
 
-// модальное окно
+// modal window
 const popUp = document.getElementById('popUp');
 function popup(){
       document.getElementById('headerUl').classList.remove("active");
@@ -65,7 +75,9 @@ function popup(){
       popUp.classList.add('active');
       return false;
 }
-// чтобы закрывалось окно при нажатии на черное
+
+
+// modal window to close by click on black bg
 popUp.addEventListener('click', function(){
     popUp.classList.remove('active');
     document.getElementById("html").classList.remove("overflow-hidden");
@@ -82,4 +94,3 @@ popUp.querySelector('.pop-up__body').addEventListener('click', function(event){
   event.stopPropagation();})
 
 
-// конец модального окна
