@@ -3,17 +3,22 @@
 }
 html {
     font-size: 1px;
+    height: 100%;
 }
 .wrapper {
     max-width: 1920rem;
     position: relative;
     margin-inline: auto;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    height: 100%; 
 }
 .container {
     max-width: 1235rem;
     padding: 0 15rem;
-    margin-inline: auto;
+    margin-inline: auto;    
     @include tablet-small-768 {
         padding: 0 24rem;
     }
@@ -21,7 +26,8 @@ html {
 body {
     font-family: $ff;
     background: $color-bg;
-    color: $color-white;       
+    color: $color-white;
+    height: 100%;      
 }
 .overflow-hidden {
 	overflow-y: hidden;
@@ -56,7 +62,7 @@ button {
     @include text($ff-titles, 60rem, 70rem, 700, $color-white);         
     @include mobile-576{
         @include text($ff-titles, 36rem, 54rem, 700, $color-white);
-        
+        text-align: left;
     }
 }
 .desc {
@@ -66,32 +72,34 @@ button {
         @include text($ff, 16rem, 24rem, 400, $color-text);
     }
 }
-header, section, footer {
-    border-bottom: 1px solid yellow;
+.blur {
+    @include desktop-small-1200 {
+        display: none;
+    }
+    &__top-left {
+        position: absolute;
+        width: 467rem;
+        height: 1234rem;
+        left: 281rem;
+        top: -181rem;
+        z-index: -10;
+        background: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.1134) 100%);
+        filter: blur(150px);
+        border-radius: 233.5rem;
+        transform: rotate(-54.37deg);
+    }
+    &__top-right {
+        position: absolute;
+        z-index: -20;
+        width: 467rem;
+        height: 1399.3rem;
+        left: 1170rem;
+        top: -40rem;
+    
+        background: linear-gradient(180deg, rgba(251, 168, 28, 0.1066) 0%, rgba(224, 86, 136, 0.0615) 100%);
+        filter: blur(150px);
+        border-radius: 233.5rem;
+        transform: rotate(65.71deg);
+    }
 }
-.blur__top-left {
-    position: absolute;
-    width: 467rem;
-    height: 1234rem;
-    left: 281rem;
-    top: -181rem;
-    z-index: -10;
-    background: linear-gradient(180deg, rgba(84, 84, 212, 0.27) 0%, rgba(84, 84, 212, 0.1134) 100%);
-    filter: blur(150px);
-    border-radius: 233.5rem;
-    transform: rotate(-54.37deg);
-}
-.blur__top-right {
-    position: absolute;
-    z-index: -20;
-    width: 467rem;
-    height: 1399.3rem;
-    left: 1170rem;
-    top: -40rem;
 
-    background: linear-gradient(180deg, rgba(251, 168, 28, 0.1066) 0%, rgba(224, 86, 136, 0.0615) 100%);
-    filter: blur(150px);
-    border-radius: 233.5rem;
-    transform: rotate(65.71deg);
-
-}

@@ -312,13 +312,25 @@ template {
           box-sizing: border-box; }
 
 html {
-  font-size: 1px; }
+  font-size: 1px;
+  height: 100%; }
 
 .wrapper {
   max-width: 1920rem;
   position: relative;
   margin-inline: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%; }
 
 .container {
   max-width: 1235rem;
@@ -331,7 +343,8 @@ html {
 body {
   font-family: "Nunito Sans", sans-serif;
   background: #19191B;
-  color: #fff; }
+  color: #fff;
+  height: 100%; }
 
 .overflow-hidden {
   overflow-y: hidden; }
@@ -376,7 +389,8 @@ button {
       font-size: 36rem;
       line-height: 54rem;
       font-weight: 700;
-      color: #fff; } }
+      color: #fff;
+      text-align: left; } }
 
 .desc {
   font-family: "Nunito Sans", sans-serif;
@@ -393,9 +407,9 @@ button {
       font-weight: 400;
       color: rgba(255, 255, 255, 0.7); } }
 
-header, section, footer {
-  border-bottom: 1px solid yellow; }
-
+@media (max-width: 1200px) {
+  .blur {
+    display: none; } }
 .blur__top-left {
   position: absolute;
   width: 467rem;
@@ -410,7 +424,6 @@ header, section, footer {
   border-radius: 233.5rem;
   -webkit-transform: rotate(-54.37deg);
           transform: rotate(-54.37deg); }
-
 .blur__top-right {
   position: absolute;
   z-index: -20;
@@ -442,7 +455,8 @@ header, section, footer {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 40rem;
-  padding-bottom: 23rem; }
+  padding-bottom: 23rem;
+  width: 100%; }
   @media (max-width: 768px) {
     .header {
       padding-top: 45rem;
@@ -898,6 +912,8 @@ input:focus ~ .bar:after {
 
 .spinner {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 9999;
@@ -1317,9 +1333,9 @@ input:focus ~ .bar:after {
     margin-bottom: 98rem; }
     @media (max-width: 576px) {
       .service-section__title {
-        text-align: left;
         max-width: 327rem;
-        margin-bottom: 50rem; } }
+        margin-bottom: 50rem;
+        margin-inline: 0; } }
 
 .card__item {
   display: -webkit-box;
@@ -1568,6 +1584,7 @@ input:focus ~ .bar:after {
         padding: 11rem 33rem; } }
 
 .footer {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

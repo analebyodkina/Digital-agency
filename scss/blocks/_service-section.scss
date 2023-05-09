@@ -72,10 +72,10 @@
         margin-inline: auto;
         max-width: 695rem;
         margin-bottom: 98rem;
-        @include mobile-576 {
-            text-align: left;
+        @include mobile-576 {            
             max-width: 327rem;
             margin-bottom: 50rem;
+            margin-inline: 0;
         }
     }
 }

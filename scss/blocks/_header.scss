@@ -2,6 +2,7 @@
     @include flex-between;
     padding-top: 40rem;
     padding-bottom: 23rem;
+    width: 100%;
     @include tablet-small-768{
         padding-top: 45rem;
         padding-bottom: 66rem;
