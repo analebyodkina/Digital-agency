@@ -317,7 +317,8 @@ html {
 .wrapper {
   max-width: 1920rem;
   position: relative;
-  margin-inline: auto; }
+  margin-inline: auto;
+  overflow-x: hidden; }
 
 .container {
   max-width: 1235rem;
@@ -330,8 +331,7 @@ html {
 body {
   font-family: "Nunito Sans", sans-serif;
   background: #19191B;
-  color: #fff;
-  overflow-x: hidden; }
+  color: #fff; }
 
 .overflow-hidden {
   overflow-y: hidden; }
@@ -410,6 +410,21 @@ header, section, footer {
   border-radius: 233.5rem;
   -webkit-transform: rotate(-54.37deg);
           transform: rotate(-54.37deg); }
+
+.blur__top-right {
+  position: absolute;
+  z-index: -20;
+  width: 467rem;
+  height: 1399.3rem;
+  left: 1170rem;
+  top: -40rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(251, 168, 28, 0.1066)), to(rgba(224, 86, 136, 0.0615)));
+  background: linear-gradient(180deg, rgba(251, 168, 28, 0.1066) 0%, rgba(224, 86, 136, 0.0615) 100%);
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
+  border-radius: 233.5rem;
+  -webkit-transform: rotate(65.71deg);
+          transform: rotate(65.71deg); }
 
 @font-face {
   font-family: 'Graphic';

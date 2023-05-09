@@ -8,6 +8,7 @@ html {
     max-width: 1920rem;
     position: relative;
     margin-inline: auto;
+    overflow-x: hidden; 
 }
 .container {
     max-width: 1235rem;
@@ -20,8 +21,7 @@ html {
 body {
     font-family: $ff;
     background: $color-bg;
-    color: $color-white;
-    overflow-x: hidden;    
+    color: $color-white;       
 }
 .overflow-hidden {
 	overflow-y: hidden;
@@ -80,4 +80,18 @@ header, section, footer {
     filter: blur(150px);
     border-radius: 233.5rem;
     transform: rotate(-54.37deg);
+}
+.blur__top-right {
+    position: absolute;
+    z-index: -20;
+    width: 467rem;
+    height: 1399.3rem;
+    left: 1170rem;
+    top: -40rem;
+
+    background: linear-gradient(180deg, rgba(251, 168, 28, 0.1066) 0%, rgba(224, 86, 136, 0.0615) 100%);
+    filter: blur(150px);
+    border-radius: 233.5rem;
+    transform: rotate(65.71deg);
+
 }
