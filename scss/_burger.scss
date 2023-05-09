@@ -22,18 +22,18 @@
   }
   
   #hamburger.is-active .line:nth-child(1){
-    -webkit-transform: translateY(4px) rotate(45deg);
-    -ms-transform: translateY(4px) rotate(45deg);
-    -o-transform: translateY(4px) rotate(45deg);
-    transform: translateY(4px) rotate(45deg);
+    -webkit-transform: translateY(4rem) rotate(45deg);
+    -ms-transform: translateY(4rem) rotate(45deg);
+    -o-transform: translateY(4rem) rotate(45deg);
+    transform: translateY(4rem) rotate(45deg);
     background-color: $color-text;
   }
   
   #hamburger.is-active .line:nth-child(3){
-    -webkit-transform: translateY(-14px) rotate(-45deg);
-    -ms-transform: translateY(-14px) rotate(-45deg);
-    -o-transform: translateY(-14px) rotate(-45deg);
-    transform: translateY(-14px) rotate(-45deg);
+    -webkit-transform: translateY(-14rem) rotate(-45deg);
+    -ms-transform: translateY(-14rem) rotate(-45deg);
+    -o-transform: translateY(-14rem) rotate(-45deg);
+    transform: translateY(-14rem) rotate(-45deg);
     background-color: $color-text;
   }
 @include tablet-992 {
@@ -49,7 +49,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 40rem;
         transform: translateY(-120%);
         transition: $transition;
         z-index: 99;

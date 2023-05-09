@@ -140,3 +140,34 @@
         } 
     }
 }
+.service-section .blur {
+    &__bottom-first {
+        position: absolute;
+        z-index: -30;
+        width: 860rem;
+        height: 2576.87rem;
+        left: 264rem;
+        top: -600rem;
+
+        background: linear-gradient(180deg, rgba(251, 168, 28, 0.048) 0%, rgba(224, 86, 136, 0.018) 100%);
+        filter: blur(150rem);
+        border-radius: 233.5rem;
+        transform: rotate(65.71deg);
+    }
+
+    &__bottom-second {
+        position: absolute;
+        z-index: -20;
+        width: 599.58rem;
+        height: 652.85rem;
+        left: 930rem;
+        top: 790rem;
+
+        background: linear-gradient(180deg, rgba(84, 84, 212, 0.2) 0%, rgba(84, 84, 212, 0.084) 100%);
+        filter: blur(150rem);
+        border-radius: 233rem;
+        transform: matrix(-0.58, -0.81, -0.81, 0.58, 0, 0);
+    }
+}
+
+

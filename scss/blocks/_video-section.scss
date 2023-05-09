@@ -33,7 +33,7 @@
         border-radius: 50%;
         transition: $transition;
         &:hover {
-            box-shadow: $color-primary 5px 5px 30px;             
+            box-shadow: $color-primary 5rem 5rem 30rem;             
         }
         svg {
             @include mobile-576 {
