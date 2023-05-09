@@ -1142,13 +1142,68 @@ input:focus ~ .bar:after {
         max-height: 40rem; } }
 
 .service-section {
-  padding-bottom: 150rem; }
+  padding-bottom: 150rem;
+  position: relative; }
+  .service-section::before {
+    content: '';
+    background: url("../../img/decorations/triangles.svg") 0 0/cover no-repeat;
+    display: inline-block;
+    width: 104.6rem;
+    height: 120rem;
+    position: absolute;
+    top: -33rem;
+    left: 47rem; }
+    @media (max-width: 768px) {
+      .service-section::before {
+        width: 65rem;
+        height: 75rem;
+        top: -75rem;
+        left: 24rem; } }
+  .service-section::after {
+    content: '';
+    background: url("../../img/decorations/x.svg") 0 0/cover no-repeat;
+    display: inline-block;
+    width: 28rem;
+    height: 28rem;
+    position: absolute;
+    -webkit-transform: rotate(-31.42deg);
+            transform: rotate(-31.42deg);
+    top: 109rem;
+    right: 4rem; }
+    @media (max-width: 768px) {
+      .service-section::after {
+        width: 18.6rem;
+        height: 18.6rem;
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+        top: 93rem;
+        right: 16rem; } }
   @media (max-width: 992px) {
     .service-section {
       padding-bottom: 140rem; } }
   .service-section__row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    position: relative; }
+    .service-section__row::before {
+      content: '';
+      background: url("../../img/decorations/x.svg") 0 0/cover no-repeat;
+      display: inline-block;
+      width: 28rem;
+      height: 28rem;
+      position: absolute;
+      -webkit-transform: rotate(25.34deg);
+              transform: rotate(25.34deg);
+      bottom: -30rem;
+      left: -14rem; }
+      @media (max-width: 576px) {
+        .service-section__row::before {
+          width: 18.6rem;
+          height: 18.6rem;
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+          left: 4rem;
+          bottom: -40rem; } }
     @media (max-width: 992px) {
       .service-section__row {
         grid-template-columns: repeat(2, 1fr); } }
@@ -1162,6 +1217,7 @@ input:focus ~ .bar:after {
     margin-bottom: 98rem; }
     @media (max-width: 576px) {
       .service-section__title {
+        text-align: left;
         max-width: 327rem;
         margin-bottom: 50rem; } }
 

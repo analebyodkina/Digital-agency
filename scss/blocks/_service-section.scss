@@ -1,11 +1,65 @@
 .service-section {
    padding-bottom: 150rem;
+   position: relative;
+        &::before {
+            content:'';
+            background: url('../../img/decorations/triangles.svg') 0 0/cover no-repeat;
+            display: inline-block;            
+            width: 104.6rem;
+            height: 120rem;
+            position: absolute;             
+            top: -33rem;
+            left: 47rem; 
+            @include tablet-small-768 {
+                width: 65rem;
+                height: 75rem;                
+                top: -75rem;
+                left: 24rem;
+            }
+        }
+   &::after {            
+            content:'';
+            background: url('../../img/decorations/x.svg') 0 0/cover no-repeat;
+            display: inline-block;
+            width: 28rem;
+            height: 28rem;
+            position: absolute;
+            transform: rotate(-31.42deg); 
+            top: 109rem;
+            right: 4rem;                        
+            @include tablet-small-768 {
+                width: 18.6rem;
+                height: 18.6rem;
+                transform: rotate(0);
+                top: 93rem;
+                right: 16rem;
+            } 
+        }
     @include tablet-992 {
         padding-bottom: 140rem;
     }
     &__row {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        &::before {
+            content:'';
+            background: url('../../img/decorations/x.svg') 0 0/cover no-repeat;
+            display: inline-block;            
+            width: 28rem;
+            height: 28rem;
+            position: absolute;
+            transform: rotate(25.34deg); 
+            bottom: -30rem;
+            left: -14rem; 
+            @include mobile-576 {
+                width: 18.6rem;
+                height: 18.6rem;
+                transform: rotate(0);
+                left: 4rem;
+                bottom: -40rem;
+            }
+        }        
         @include tablet-992 {
             grid-template-columns: repeat(2, 1fr); 
         }
@@ -19,6 +73,7 @@
         max-width: 695rem;
         margin-bottom: 98rem;
         @include mobile-576 {
+            text-align: left;
             max-width: 327rem;
             margin-bottom: 50rem;
         }
