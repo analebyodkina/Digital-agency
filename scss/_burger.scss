@@ -3,7 +3,7 @@
     z-index: 100;
 }
 .header__burger .line{
-    width: 40rem;
+    width: 30rem;
     height: 4rem;
     border-radius: 2rem;
     background-color: $color-white;
@@ -54,9 +54,12 @@
         transition: $transition;
         z-index: 99;
     }
+
     .nav__ul.active {
         transform: translateY(0%);
         z-index: 99;
     } 
+  }
 
-}
+  
+

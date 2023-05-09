@@ -19,36 +19,11 @@
         @include tablet-992 {
             height: unset;
             padding-bottom: 0;
-
         }
     }
     &__item {
-        background: #1E1E20;
+        background: $slider-items;
         border-radius: 14rem;
         padding: 24rem;
     }
 }
-
-// .owl-item.active {
-
-
-//     &:first-child{ 
-//         transform: translateY(0);
-//     }
-
-//     &:nth-child(3n+3) {
-//         transform: translateY(0);
-//     }
-
-//     &:nth-child(3n+2){
-//         transform: translateY(58rem);
-//     }
-//     &:nth-child(3n){
-//         transform: translateY(116rem);
-//     }
-// }
-// .owl-carousel .owl-stage-outer {
-//     overflow-x: hidden;
-//     // overflow-y: initial;    
-//     height: 417rem;
-// }

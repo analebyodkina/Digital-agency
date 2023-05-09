@@ -1,10 +1,10 @@
 .header {
     @include flex-between;
-    padding-top: 42rem;
-    padding-bottom: 96rem;
-    @include mobile-576 {
+    padding-top: 40rem;
+    padding-bottom: 23rem;
+    @include tablet-small-768{
         padding-top: 45rem;
-        padding-bottom: 69rem;
+        padding-bottom: 66rem;
     }
     &__logo {
         @include mobile-576 {

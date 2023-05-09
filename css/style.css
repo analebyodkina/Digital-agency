@@ -405,12 +405,12 @@ header, section, footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 42rem;
-  padding-bottom: 96rem; }
-  @media (max-width: 576px) {
+  padding-top: 40rem;
+  padding-bottom: 23rem; }
+  @media (max-width: 768px) {
     .header {
       padding-top: 45rem;
-      padding-bottom: 69rem; } }
+      padding-bottom: 66rem; } }
   @media (max-width: 576px) {
     .header__logo {
       max-width: 115rem; } }
@@ -483,7 +483,7 @@ header, section, footer {
   z-index: 100; }
 
 .header__burger .line {
-  width: 40rem;
+  width: 30rem;
   height: 4rem;
   border-radius: 2rem;
   background-color: #fff;
@@ -871,12 +871,12 @@ input:focus ~ .bar:after {
       -ms-flex-align: center;
           align-items: center;
   overflow-x: hidden;
-  margin-bottom: 151rem;
+  padding-bottom: 151rem;
   -webkit-animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
           animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
   @media (max-width: 992px) {
     .main-section {
-      margin-bottom: 75rem;
+      padding-bottom: 140rem;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -956,18 +956,18 @@ input:focus ~ .bar:after {
       font-weight: 700; }
     @media (max-width: 992px) {
       .main-section__btn {
-        margin-bottom: 92.5rem; } }
+        margin-bottom: 50rem; } }
     .main-section__btn:hover {
       background: #3131c4; }
   .main-section__image {
     max-width: 656rem; }
     .main-section__image img {
-      -webkit-transform: translate(75rem, -65rem);
-              transform: translate(75rem, -65rem); }
+      -webkit-transform: translateX(75rem);
+              transform: translateX(75rem); }
       @media (max-width: 992px) {
         .main-section__image img {
-          -webkit-transform: translate(0, -65rem);
-                  transform: translate(0, -65rem); } }
+          -webkit-transform: translateX(0);
+                  transform: translateX(0); } }
 
 .video-section {
   padding-bottom: 150rem; }
