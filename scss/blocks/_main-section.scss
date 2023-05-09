@@ -59,7 +59,40 @@
         }
 	}
     &__image {
-        max-width: 656rem;        
+        max-width: 656rem;
+        position: relative;
+    &::before {
+        content:'';
+        background: url('../../img/decorations/line.svg') 0 0/cover no-repeat;
+        display: inline-block;            
+        width: 95rem;
+        height: 28rem;
+        position: absolute; 
+        top: 124rem;
+        left: 0; 
+        @include tablet-small-768 {
+            width: 61rem;
+            height: 18rem;
+            left: -2rem;
+            top: 47rem;
+        }
+    }
+    &::after {            
+        content:'';
+        background: url('../../img/decorations/circles.svg') 0 0/cover no-repeat;
+        display: inline-block;
+        width: 51rem;
+        height: 60rem;
+        position: absolute; 
+        top: 77rem;
+        right: 0;                   
+        @include tablet-small-768 {
+            width: 35rem;
+            height: 42rem;            
+            top: 23rem;
+            right: 18rem;
+        } 
+    }        
         img {            
             transform: translateX(75rem);
             

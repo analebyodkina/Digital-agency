@@ -8,7 +8,7 @@
     border-radius: 2rem;
     background-color: $color-white;
     display: block;
-    margin: 8rem auto;
+    margin: 5rem auto;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -22,10 +22,10 @@
   }
   
   #hamburger.is-active .line:nth-child(1){
-    -webkit-transform: translateY(9px) rotate(45deg);
-    -ms-transform: translateY(9px) rotate(45deg);
-    -o-transform: translateY(9px) rotate(45deg);
-    transform: translateY(9px) rotate(45deg);
+    -webkit-transform: translateY(4px) rotate(45deg);
+    -ms-transform: translateY(4px) rotate(45deg);
+    -o-transform: translateY(4px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
     background-color: $color-text;
   }
   
