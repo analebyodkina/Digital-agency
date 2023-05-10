@@ -1,3 +1,6 @@
+.owl-item.active {
+    transition: $transition;
+}
 @include min-tablet {
     .owl-item.active {
         &:first-child{ 

@@ -441,7 +441,7 @@ button {
 
 @font-face {
   font-family: 'Graphic';
-  src: url("fonts/graphik-bold.woff2") format("woff2");
+  src: url("../fonts/graphik-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal; }
 .header {
@@ -827,6 +827,10 @@ input:valid ~ label {
 input:focus ~ .bar:before,
 input:focus ~ .bar:after {
   width: 50%; }
+
+.owl-item.active {
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out; }
 
 @media (min-width: 992px) {
   .owl-item.active:first-child {
