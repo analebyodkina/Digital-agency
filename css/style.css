@@ -309,7 +309,8 @@ template {
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 html {
   font-size: 1px;
