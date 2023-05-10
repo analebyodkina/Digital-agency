@@ -68,8 +68,7 @@
 				</div>			
 			</section>
 		
-			<section class="video-section container">
-				<a name="about-us"></a>
+			<section class="video-section container" id="about-us">				
 				<div class="video-section__info">
 					<h2 class="title video-section__title">
 						Why Enver Is The Best Choice?
@@ -90,8 +89,7 @@
 				</div>
 			</section>
 		
-			<section class="service-section container">
-				<a name="services"></a>
+			<section class="service-section container" id="services">				
 				<h2 class="title service-section__title">The Service We Provide For You</h2>
 				
 				<div class="service-section__row card">
@@ -145,8 +143,7 @@
 				</div>
 			</section>
 		
-			<section class="portfolio-section container">
-				<a name="projects"></a>
+			<section class="portfolio-section container" id="projects">				
 				<h2 class="portfolio-section__title">
 					Our Awesome Portofolio
 				</h2>
@@ -190,19 +187,23 @@
 				<div class="pop-up__container">
 					<div class="pop-up__body">
 						<h3 class="pop-up__title">Contact us</h3>
-						<form action="" class="form pop-up__form">
+						<form action="/" class="form pop-up__form">
 							<div class="form__group">
-								<input class="form__input" type="text" name="name" required />
-								<span class="highlight"></span>
-								<span class="bar"></span>
-								<label for="name">Name</label>
+								<label class="form__label field">
+									<span class="field__title">Name</span>
+									<input type="text" class="form__input" name="name" required />
+									<span class="highlight"></span>
+									<span class="bar"></span>
+								</label>
 							</div>
 							
 							<div class="form__group">
-								<input class="form__input" type="text" name="email" required />
-								<span class="highlight"></span>
-								<span class="bar"></span>
-								<label for="email">Email</label>
+								<label class="form__label field">
+									<span class="field__title">Email</span>
+									<input type="email" class="form__input" name="email" required />
+									<span class="highlight"></span>
+									<span class="bar"></span>
+								</label>							
 							</div>					
 							<button class="btn form__btn">Contact us</button>
 							<div class="form__footer">

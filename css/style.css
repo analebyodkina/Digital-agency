@@ -712,7 +712,9 @@ button {
 
 .form__group {
   position: relative;
-  margin-bottom: 45rem; }
+  margin-bottom: 40rem;
+  border: 1px solid red;
+  height: auto; }
 .form__input {
   display: block;
   font-size: 18rem;
@@ -723,15 +725,16 @@ button {
   .form__input:focus {
     outline: none; }
 .form label {
-  position: absolute;
-  top: 10rem;
-  left: 5rem;
-  color: #999;
   font-size: 18rem;
-  font-weight: normal;
-  pointer-events: none;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  color: #999;
+  position: relative; }
+.form .field__title {
+  position: absolute;
+  left: -200rem;
+  bottom: 10rem; }
+  @media (max-width: 576px) {
+    .form .field__title {
+      left: -127rem; } }
 .form__footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -796,12 +799,6 @@ button {
       padding: 12rem 21rem; } }
   .form__btn:hover {
     background: #3131c4; }
-
-input:focus ~ label,
-input:valid ~ label {
-  top: -20rem;
-  font-size: 12rem;
-  color: #5454D4; }
 
 .bar {
   display: block;
@@ -1237,6 +1234,8 @@ input:focus ~ .bar:after {
   .video-section__image {
     position: relative;
     cursor: pointer; }
+  .video-section a {
+    display: inline-block; }
   .video-section__play {
     display: inline-block;
     position: absolute;

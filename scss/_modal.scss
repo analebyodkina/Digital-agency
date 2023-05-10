@@ -51,10 +51,12 @@
 .form {
     &__group {
         position: relative;
-        margin-bottom: 45rem;
+        margin-bottom: 40rem;
+        border: 1px solid red;
+        height: auto;
     }
     &__input {
-        display: block;	
+        display: block;	        
         font-size: 18rem;
         width: 100%;
         padding: 10rem;
@@ -64,16 +66,42 @@
             outline: none;
         }
     }
-    label {
-        position: absolute;
-        top: 10rem;
-        left: 5rem;
-        color: #999;
+    // label { 
+    //     position: relative;
+    //     z-index: -20;
+    //     font-weight: normal;
+    //     pointer-events: none;
+    //     transition: all 0.2s ease;
+        
+    // }
+    label  {
         font-size: 18rem;
-        font-weight: normal;
-        pointer-events: none;
-        transition: all 0.2s ease;
+        color: #999;
+        position: relative;
+        // position: absolute;
+        // left: 15rem;
+        // top: 20rem;
+        // z-index: -10;
     }
+    .field__title {
+        position: absolute;
+        left: -200rem;
+        bottom: 10rem;
+        @include mobile-576 {
+            left: -127rem;
+        }
+    }   
+        
+        
+       
+    //     // top: 20rem;
+    //     // left: 15rem;
+    //     color: #999;
+    //     font-size: 18rem;
+    //     font-weight: normal;
+    //     pointer-events: none;
+    //     transition: all 0.2s ease;
+    // }
     &__footer {
         @include flex-between;
         margin-top: 30rem;
@@ -113,12 +141,12 @@
         }
     }
 }
-input:focus ~ label,
-input:valid ~ label {
-	top: -20rem;
-	font-size: 12rem;
-	color: $color-primary;
-}
+// input:focus ~ label,
+// input:valid ~ label {
+// 	top: -20rem;
+// 	font-size: 12rem;
+// 	color: $color-primary;
+// }
 .bar {
 	display: block;
 	position: relative;	
