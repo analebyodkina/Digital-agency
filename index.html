@@ -190,8 +190,8 @@
 						<form action="/" class="form pop-up__form">
 							<div class="form__group">
 								<label class="form__label field">
-									<span class="field__title">Name</span>
-									<input type="text" class="form__input" name="name" required>
+									<span class="field__title" id="modal-input">Name</span>
+									<input type="text" class="form__input" name="name" required onclick="modText(this)">
 									<span class="highlight"></span>
 									<span class="bar"></span>
 								</label>
@@ -199,8 +199,8 @@
 							
 							<div class="form__group">
 								<label class="form__label field">
-									<span class="field__title">Email</span>
-									<input type="email" class="form__input" name="email" required>
+									<span class="field__title" id="modal-input">Email</span>
+									<input type="email" class="form__input" name="email" required onclick="modText(this)">
 									<span class="highlight"></span>
 									<span class="bar"></span>
 								</label>							

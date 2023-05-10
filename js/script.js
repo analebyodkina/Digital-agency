@@ -1,7 +1,6 @@
 // opens burger menu
 function navToggle() {
-    var headerUl = document.getElementById("headerUl");
-    headerUl.classList.toggle("active");
+    document.getElementById("headerUl").classList.toggle("active");
     document.getElementById("html").classList.toggle("overflow-hidden");
     document.getElementById("body").classList.toggle("overflow-hidden");
   }
@@ -81,16 +80,35 @@ function popup(){
 popUp.addEventListener('click', function(){
     popUp.classList.remove('active');
     document.getElementById("html").classList.remove("overflow-hidden");
-    document.getElementById("body").classList.remove("overflow-hidden");    
+    document.getElementById("body").classList.remove("overflow-hidden");
+    var titleElements = document.querySelectorAll('.field__title');
+    titleElements.forEach(function(titleElement) {
+    titleElement.classList.remove('active');
+  });    
 });
 const closePopUp = document.getElementById('closePopUp');
 closePopUp.addEventListener('click', () => {
     popUp.classList.remove('active');
     document.getElementById("html").classList.remove("overflow-hidden");
-    document.getElementById("body").classList.remove("overflow-hidden");    
+    document.getElementById("body").classList.remove("overflow-hidden");
+    var titleElements = document.querySelectorAll('.field__title');
+    titleElements.forEach(function(titleElement) {
+    titleElement.classList.remove('active');
+  });
+        
 });
 
 popUp.querySelector('.pop-up__body').addEventListener('click', function(event){  
   event.stopPropagation();})
+
+
+
+  function modText(inputElement) {
+    var labelElement = inputElement.parentNode; // Get the parent label element
+    var titleElement = labelElement.querySelector(".field__title"); // Find the field__title element within the label
+  
+    titleElement.classList.add("active"); // Add the "active" class to the field__title element
+  }
+  
 
 

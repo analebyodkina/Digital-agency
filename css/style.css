@@ -714,7 +714,6 @@ button {
 .form__group {
   position: relative;
   margin-bottom: 40rem;
-  border: 1px solid red;
   height: auto; }
 .form__input {
   display: block;
@@ -726,16 +725,26 @@ button {
   .form__input:focus {
     outline: none; }
 .form label {
-  font-size: 18rem;
-  color: #999;
-  position: relative; }
+  position: relative;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
 .form .field__title {
   position: absolute;
-  left: -200rem;
-  bottom: 10rem; }
+  left: -195rem;
+  bottom: 10rem;
+  color: #999;
+  font-size: 18rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none; }
   @media (max-width: 576px) {
     .form .field__title {
       left: -127rem; } }
+  .form .field__title.active {
+    bottom: 40rem;
+    left: -190rem;
+    font-size: 12rem;
+    color: #5454D4; }
 .form__footer {
   display: -webkit-box;
   display: -ms-flexbox;
