@@ -102,4 +102,16 @@ button {
         transform: rotate(65.71deg);
     }
 }
+*::-webkit-scrollbar {
+    width: 15rem;
+    height: 10rem;
+    background-color: $color-bg;
+    
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 16rem 0 16rem 0;
+    height: 10rem;
+    width: 10rem;
+    background-color: $color-primary;   
+}
 
