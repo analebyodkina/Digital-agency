@@ -59,7 +59,7 @@
     position: relative;
     &::before {
       content: "";
-      background: url("/img/decorations/line.svg") 0 0 / cover no-repeat;
+      background: url("img/decorations/line.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 95rem;
       height: 28rem;
@@ -75,7 +75,7 @@
     }
     &::after {
       content: "";
-      background: url("../../img/decorations/circles.svg") 0 0 / cover no-repeat;
+      background: url("img/decorations/circles.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 51rem;
       height: 60rem;
@@ -101,7 +101,7 @@
     position: relative;
     &::before {
       content: "";
-      background: url("../../img/decorations/triangles.svg") 0 0 / cover
+      background: url(img/decorations/triangles.svg) 0 0 / cover
         no-repeat;
       display: inline-block;
       width: 104rem;
@@ -118,7 +118,7 @@
     }
     &::after {
       content: "";
-      background: url("../../img/decorations/x.svg") 0 0 / cover no-repeat;
+      background: url(img/decorations/x.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 33.3rem;
       height: 33.3rem;
