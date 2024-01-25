@@ -1174,7 +1174,7 @@ input:focus ~ .bar:after {
           top: 47rem; } }
     .main-section__image::after {
       content: " ";
-      background: url(../img/icons/circles.svg) 0 0/cover no-repeat;
+      background: url(../img/decorations/circles.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 51rem;
       height: 60rem;
