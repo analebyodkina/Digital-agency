@@ -58,7 +58,7 @@
     max-width: 656rem;
     position: relative;
     &::before {
-      content: url(img/icons/menu-icon.svg);
+      content: url(/img/icons/menu-icon.svg);
       // background: url(img/icons/menu-icon.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 95rem;
@@ -117,8 +117,8 @@
       }
     }
     &::after {
-      content: "";
-      background: url(img/decorations/x.svg) 0 0 / cover no-repeat;
+      content: url(img/decorations/x.svg);
+      // background: url(img/decorations/x.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 33.3rem;
       height: 33.3rem;
