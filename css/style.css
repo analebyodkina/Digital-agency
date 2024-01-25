@@ -1159,6 +1159,7 @@ input:focus ~ .bar:after {
     max-width: 656rem;
     position: relative; }
     .main-section__image::before {
+      content: " ";
       background: url(../img/decorations/line.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 95rem;
@@ -1183,8 +1184,8 @@ input:focus ~ .bar:after {
       right: 0; }
       @media (max-width: 768px) {
         .main-section__image::after {
-          width: 35rem;
-          height: 42rem;
+          width: 36.7rem;
+          height: 43.5rem;
           top: 23rem;
           right: 18rem; } }
     .main-section__image img {

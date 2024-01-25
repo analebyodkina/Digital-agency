@@ -58,6 +58,7 @@
     max-width: 656rem;
     position: relative;
     &::before {
+      content:" ";
       background: url(../img/decorations/line.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 95rem;
@@ -82,8 +83,8 @@
       top: 77rem;
       right: 0;
       @include tablet-small-768 {
-        width: 35rem;
-        height: 42rem;
+        width: 36.7rem;
+        height: 43.5rem;
         top: 23rem;
         right: 18rem;
       }
