@@ -59,12 +59,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: $transition;
     &.disabled {
         background: rgba(255, 255, 255, 0.2) !important;
-    }
-    &:hover {
-        background: $color-primary;
-    }
+    }    
     span {
         font-size: 1px;
         position: relative;
@@ -90,5 +88,12 @@
     span::before {
         content: '\e5cc';
 
+    }
+}
+@media (hover: hover) {
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+        &:hover {
+            background: $color-primary;
+        } 
     }
 }

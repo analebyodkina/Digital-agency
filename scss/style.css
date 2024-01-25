@@ -421,12 +421,12 @@ button {
   transform: rotate(65.71deg); }
 
 *::-webkit-scrollbar {
-  width: 10rem;
+  width: 15rem;
   height: 10rem;
   background-color: #19191B; }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 16rem;
+  border-radius: 16rem 0 16rem 0;
   height: 10rem;
   width: 10rem;
   background-color: #5454D4; }
@@ -587,10 +587,6 @@ button {
     background-size: 300% 300%;
     z-index: -2;
     border-radius: 5rem; }
-  .nav__button:hover {
-    color: #19191B; }
-    .nav__button:hover:before {
-      width: 0%; }
 
 @keyframes animatedgradient {
   0% {
@@ -599,6 +595,11 @@ button {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
+@media (hover: hover) {
+  .nav__button:hover {
+    color: #19191B; }
+    .nav__button:hover:before {
+      width: 0%; } }
 .pop-up {
   width: 100%;
   height: 100%;
@@ -1488,3 +1489,5 @@ input:focus ~ .bar:after {
         line-height: 28rem;
         font-weight: 400;
         color: #fff; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,55 +1,57 @@
 .video-section {
-    padding-bottom: 150rem;
+  padding-bottom: 150rem;
+  @include tablet-992 {
+    padding-bottom: 140rem;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50rem;
     @include tablet-992 {
-        padding-bottom: 140rem;
+      flex-direction: column;
+      gap: 30rem;
     }
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 50rem;
-        @include tablet-992 {
-            flex-direction: column;
-            gap: 30rem;
-        }
+  }
+  &__title,
+  &__desc {
+    max-width: 588rem;
+    @include mobile-576 {
+      max-width: 327rem;
     }
-    &__title, &__desc {
-        max-width: 588rem;
-        @include mobile-576 {
-            max-width: 327rem;            
-        }        
+  }
+  &__image {
+    position: relative;
+    cursor: pointer;
+  }
+  a {
+    display: inline-block;
+  }
+  &__play {
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 124rem;
+    border-radius: 50%;
+    transition: $transition;    
+    svg {
+      @include mobile-576 {
+        max-width: 40rem;
+        max-height: 40rem;
+      }
     }
-    &__image {
-        position: relative;
-        cursor: pointer; 
+    @include mobile-576 {
+      max-width: 40rem;
+      max-height: 40rem;
     }
-    a {
-        display: inline-block;
-    }
-    &__play {      
-        display: inline-block;
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 124rem;
-        border-radius: 50%;
-        transition: $transition;
-        &:hover {
-            box-shadow: $color-primary 5rem 5rem 30rem;             
-        }
-        svg {
-            @include mobile-576 {
-                max-width: 40rem;
-                max-height: 40rem;   
-            }            
-        }        
-        @include mobile-576 {
-            max-width: 40rem;
-            max-height: 40rem;   
-        }    
-    }
+  }
 }
-
-
-
+@media (hover: hover) {
+  .video-section__play {
+    &:hover {
+      box-shadow: $color-primary 5rem 5rem 30rem;
+    }
+  }
+}

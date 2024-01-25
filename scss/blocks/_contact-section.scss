@@ -54,13 +54,17 @@
         padding: 16rem 49rem;
         @include text ($ff, 21rem, 29rem, 700, $color-white); 
         flex-shrink: 0;
-        @include press;
-        &:hover {
-            background: darken($color-primary, 10%);
-        }
+        @include press;        
         @include mobile-576 {
             line-height: 22rem;
             padding: 11rem 33rem;
+        }
+    }
+}
+@media (hover: hover) {
+    .contact-section__btn {
+        &:hover {
+            background: darken($color-primary, 10%);
         }
     }
 }

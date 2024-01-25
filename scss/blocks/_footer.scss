@@ -22,10 +22,7 @@
         a {
             @include text ($ff, 18rem, 25rem, 400, $color-text);
             transition: $transition;
-            @include press;
-            &:hover {
-                color: $color-primary;
-            }
+            @include press;            
             @include tablet-992 {
                 @include text ($ff, 18rem, 28rem, 700, $color-text);
             }
@@ -37,6 +34,13 @@
         letter-spacing: -0.5rem;
         @include tablet-992 {
             @include text ($ff-titles, 18rem, 28rem, 400, $color-white);
+        }
+    }
+}
+@media (hover: hover) {
+    .footer__ul a{
+        &:hover {
+            color: $color-primary;
         }
     }
 }

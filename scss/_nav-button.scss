@@ -30,13 +30,7 @@
       background-size: 300% 300%;
       z-index: -2;
       border-radius: 5rem;
-    }
-    &:hover {
-        color: $color-bg;   
-      &:before {
-        width: 0%;
-      }
-    }
+    }    
   }  
   @keyframes animatedgradient {
       0% {
@@ -48,4 +42,14 @@
       100% {
           background-position: 0% 50%;
       }
+  }
+  @media (hover: hover) {
+    .nav__button {
+      &:hover {
+        color: $color-bg;   
+      &:before {
+        width: 0%;
+      }
+    }
+    }
   }

@@ -1,56 +1,60 @@
 .header {
-    @include flex-between;
-    padding-top: 40rem;
-    padding-bottom: 23rem;
-    width: 100%;
-    @include tablet-small-768{
-        padding-top: 45rem;
-        padding-bottom: 66rem;
+  @include flex-between;
+  padding-top: 40rem;
+  padding-bottom: 23rem;
+  width: 100%;
+  @include tablet-small-768 {
+    padding-top: 45rem;
+    padding-bottom: 66rem;
+  }
+  &__logo {
+    @include mobile-576 {
+      max-width: 115rem;
     }
-    &__logo {
-        @include mobile-576 {
-            max-width: 115rem;
-        }
-    } 
-    &__burger {
-        display: none;        
-        @include tablet-992 {
-            display: inline-block;
-            color: $color-white;
-        }
+  }
+  &__burger {
+    display: none;
+    @include tablet-992 {
+      display: inline-block;
+      color: $color-white;
     }
+  }
 }
 .nav {
+  flex-grow: 1;
+  &__ul {
+    position: relative;
+    display: flex;
+    align-items: center;
     flex-grow: 1;
-    &__ul {
-        position: relative; 
-        display: flex;       
-        align-items: center;
-        flex-grow: 1;
-        gap: 40rem;
-        transition: $transition;        
-        a {
-            @include text ($ff, 18rem, 25rem, 400, $color-text);            
-            transition: $transition;
-            @include press;
-            &:not(.nav__button):hover {
-                color: $color-primary;
-            }
-        }        
+    gap: 40rem;
+    transition: $transition;
+    a {
+      @include text($ff, 18rem, 25rem, 400, $color-text);
+      transition: $transition;
+      @include press;
     }
-    &__li {
-        &:first-child, &:last-of-type {
-            margin-left: auto;
-            @include tablet-992 {
-                margin-left: inherit;
-            }
-
-        }
+  }
+  &__li {
+    &:first-child,
+    &:last-of-type {
+      margin-left: auto;
+      @include tablet-992 {
+        margin-left: inherit;
+      }
     }
-    .active {
-        color: $color-primary;
-        @include tablet-992 {
-            color: $color-text;
-        }
-    }    
-}  
+  }
+  .active {
+    color: $color-primary;
+    @include tablet-992 {
+      color: $color-text;
+    }
+  }
+}
+@media (hover: hover) {
+  .nav__ul a {
+    &:not(.nav__button):hover {
+      color: $color-primary;
+    }
+  }
+}
