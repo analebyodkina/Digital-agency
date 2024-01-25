@@ -3,7 +3,7 @@
   position: relative;
   &::before {
     content: "";
-    background: url("../../img/decorations/triangles.svg") 0 0 / cover no-repeat;
+    background: url(../img/decorations/triangles.svg) 0 0 / cover no-repeat;
     display: inline-block;
     width: 104.6rem;
     height: 120rem;
@@ -19,7 +19,7 @@
   }
   &::after {
     content: "";
-    background: url("../../img/decorations/x.svg") 0 0 / cover no-repeat;
+    background: url(../img/decorations/x.svg) 0 0 / cover no-repeat;
     display: inline-block;
     width: 28rem;
     height: 28rem;
@@ -44,7 +44,7 @@
     position: relative;
     &::before {
       content: "";
-      background: url("../../img/decorations/x.svg") 0 0 / cover no-repeat;
+      background: url(../img/decorations/x.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 28rem;
       height: 28rem;

@@ -3,7 +3,7 @@
     position: relative;
     &::before {
         content:'';
-        background: url('../../img/decorations/line.svg') 0 0/cover no-repeat;
+        background: url(../img/decorations/line.svg) 0 0/cover no-repeat;
         display: inline-block;            
         width: 95rem;
         height: 28rem;
@@ -19,7 +19,7 @@
     }    
     &::after {            
         content:'';
-        background: url('../../img/decorations/circles.svg') 0 0/cover no-repeat;
+        background: url(../img/decorations/circles.svg) 0 0/cover no-repeat;
         display: inline-block;
         width: 62rem;
         height: 73rem;

@@ -58,8 +58,7 @@
     max-width: 656rem;
     position: relative;
     &::before {
-      content: url(/img/icons/service-icon1.svg);
-      // background: url(img/icons/menu-icon.svg) 0 0 / cover no-repeat;
+      background: url(../img/decorations/line.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 95rem;
       height: 28rem;
@@ -75,7 +74,7 @@
     }
     &::after {
       content: " ";
-      background: url(/img/icons/service-icon2.svg) 0 0 / cover no-repeat;
+      background: url(../img/icons/circles.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 51rem;
       height: 60rem;
@@ -101,8 +100,7 @@
     position: relative;
     &::before {
       content: "";
-      background: url(img/decorations/triangles.svg) 0 0 / cover
-        no-repeat;
+      background: url(../img/decorations/triangles.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 104rem;
       height: 120rem;
@@ -117,10 +115,8 @@
       }
     }
     &::after {
-      content: ' ';
-      background-image: url(img/decorations/x.svg);
-      background-position: 0 0;
-      background-repeat: no-repeat;
+      content: " ";
+      background: url(../img/decorations/x.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 33.3rem;
       height: 33.3rem;
