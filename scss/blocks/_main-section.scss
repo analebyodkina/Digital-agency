@@ -59,7 +59,7 @@
     position: relative;
     &::before {
       content: "";
-      background: url("/img/decorations/line.svg") 0 0 / cover no-repeat;
+      background: url(/img/icons/menu-icon.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 95rem;
       height: 28rem;
@@ -75,7 +75,7 @@
     }
     &::after {
       content: "";
-      background: url("../../img/decorations/circles.svg") 0 0 / cover no-repeat;
+      background: url(../../img/icons/service-icon1.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 51rem;
       height: 60rem;
