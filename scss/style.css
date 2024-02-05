@@ -305,7 +305,8 @@ template {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 html {
   font-size: 1px;
@@ -483,8 +484,6 @@ button {
   100% {
     -webkit-transform: scale(0.93);
     transform: scale(0.93); } }
-      .nav__ul a:not(.nav__button):hover {
-        color: #5454D4; }
   .nav__li:first-child, .nav__li:last-of-type {
     margin-left: auto; }
     @media (max-width: 992px) {
@@ -496,9 +495,13 @@ button {
       .nav .active {
         color: rgba(255, 255, 255, 0.7); } }
 
+@media (hover: hover) {
+  .nav__ul a:not(.nav__button):hover {
+    color: #5454D4; } }
 .header__burger {
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  cursor: pointer; }
 
 .header__burger .line {
   width: 30rem;
@@ -510,9 +513,6 @@ button {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-
-.header__burger:hover {
-  cursor: pointer; }
 
 #hamburger.is-active .line:nth-child(2) {
   opacity: 0; }
@@ -810,11 +810,10 @@ input:focus ~ .bar:after {
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  transition: 0.3s all ease-in-out; }
   .owl-carousel .owl-nav button.owl-prev.disabled, .owl-carousel .owl-nav button.owl-next.disabled {
     background: rgba(255, 255, 255, 0.2) !important; }
-  .owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
-    background: #5454D4; }
   .owl-carousel .owl-nav button.owl-prev span, .owl-carousel .owl-nav button.owl-next span {
     font-size: 1px;
     position: relative; }
@@ -837,6 +836,9 @@ input:focus ~ .bar:after {
 .owl-carousel .owl-nav button.owl-next span::before {
   content: '\e5cc'; }
 
+@media (hover: hover) {
+  .owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
+    background: #5454D4; } }
 .spinner {
   position: fixed;
   top: 0;
@@ -1005,14 +1007,12 @@ input:focus ~ .bar:after {
     @media (max-width: 992px) {
       .main-section__btn {
         margin-bottom: 50rem; } }
-    .main-section__btn:hover {
-      background: #3131c4; }
   .main-section__image {
     max-width: 656rem;
     position: relative; }
     .main-section__image::before {
-      content: '';
-      background: url("../../img/decorations/line.svg") 0 0/cover no-repeat;
+      content: " ";
+      background: url(../img/decorations/line.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 95rem;
       height: 28rem;
@@ -1026,8 +1026,8 @@ input:focus ~ .bar:after {
           left: -2rem;
           top: 47rem; } }
     .main-section__image::after {
-      content: '';
-      background: url("../../img/decorations/circles.svg") 0 0/cover no-repeat;
+      content: " ";
+      background: url(../img/decorations/circles.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 51rem;
       height: 60rem;
@@ -1036,8 +1036,8 @@ input:focus ~ .bar:after {
       right: 0; }
       @media (max-width: 768px) {
         .main-section__image::after {
-          width: 35rem;
-          height: 42rem;
+          width: 36.7rem;
+          height: 43.5rem;
           top: 23rem;
           right: 18rem; } }
     .main-section__image img {
@@ -1049,8 +1049,8 @@ input:focus ~ .bar:after {
   .main-section__image div {
     position: relative; }
     .main-section__image div::before {
-      content: '';
-      background: url("../../img/decorations/triangles.svg") 0 0/cover no-repeat;
+      content: "";
+      background: url(../img/decorations/triangles.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 104rem;
       height: 120rem;
@@ -1064,8 +1064,8 @@ input:focus ~ .bar:after {
           bottom: -36rem;
           left: 0; } }
     .main-section__image div::after {
-      content: '';
-      background: url("../../img/decorations/x.svg") 0 0/cover no-repeat;
+      content: " ";
+      background: url(../img/decorations/x.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 33.3rem;
       height: 33.3rem;
@@ -1079,6 +1079,9 @@ input:focus ~ .bar:after {
           right: 12.5rem;
           bottom: 34.5rem; } }
 
+@media (hover: hover) {
+  .main-section__btn:hover {
+    background: #3131c4; } }
 .video-section {
   padding-bottom: 150rem; }
   @media (max-width: 992px) {
@@ -1112,8 +1115,6 @@ input:focus ~ .bar:after {
     max-width: 124rem;
     border-radius: 50%;
     transition: 0.3s all ease-in-out; }
-    .video-section__play:hover {
-      box-shadow: #5454D4 5rem 5rem 30rem; }
     @media (max-width: 576px) {
       .video-section__play svg {
         max-width: 40rem;
@@ -1123,12 +1124,15 @@ input:focus ~ .bar:after {
         max-width: 40rem;
         max-height: 40rem; } }
 
+@media (hover: hover) {
+  .video-section__play:hover {
+    box-shadow: #5454D4 5rem 5rem 30rem; } }
 .service-section {
   padding-bottom: 150rem;
   position: relative; }
   .service-section::before {
-    content: '';
-    background: url("../../img/decorations/triangles.svg") 0 0/cover no-repeat;
+    content: "";
+    background: url(../img/decorations/triangles.svg) 0 0/cover no-repeat;
     display: inline-block;
     width: 104.6rem;
     height: 120rem;
@@ -1142,8 +1146,8 @@ input:focus ~ .bar:after {
         top: -75rem;
         left: 24rem; } }
   .service-section::after {
-    content: '';
-    background: url("../../img/decorations/x.svg") 0 0/cover no-repeat;
+    content: "";
+    background: url(../img/decorations/x.svg) 0 0/cover no-repeat;
     display: inline-block;
     width: 28rem;
     height: 28rem;
@@ -1166,8 +1170,8 @@ input:focus ~ .bar:after {
     grid-template-columns: repeat(3, 1fr);
     position: relative; }
     .service-section__row::before {
-      content: '';
-      background: url("../../img/decorations/x.svg") 0 0/cover no-repeat;
+      content: "";
+      background: url(../img/decorations/x.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 28rem;
       height: 28rem;
@@ -1207,20 +1211,6 @@ input:focus ~ .bar:after {
   padding: 48rem 43rem;
   gap: 24rem;
   transition: all 0.5s; }
-  .card__item:hover {
-    transition: all 0.7s;
-    transform: translateY(-10rem);
-    border-radius: 10rem; }
-    .card__item:hover img {
-      transform: scale(1.2);
-      filter: saturate(150%);
-      box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7); }
-  .card__item._red:hover {
-    box-shadow: inset 0 0 15rem #F04037; }
-  .card__item._blue:hover {
-    box-shadow: inset 0 0 15rem #5454D4; }
-  .card__item._yellow:hover {
-    box-shadow: inset 0 0 15rem #FEDC5A; }
 .card__title {
   font-family: "Nunito Sans", sans-serif;
   font-size: 28rem;
@@ -1281,12 +1271,27 @@ input:focus ~ .bar:after {
   border-radius: 233rem;
   transform: matrix(-0.58, -0.81, -0.81, 0.58, 0, 0); }
 
+@media (hover: hover) {
+  .card__item:hover {
+    transition: all 0.7s;
+    transform: translateY(-10rem);
+    border-radius: 10rem; }
+    .card__item:hover img {
+      transform: scale(1.2);
+      filter: saturate(150%);
+      box-shadow: 0 0 10rem rgba(113, 112, 112, 0.7); }
+  .card__item._red:hover {
+    box-shadow: inset 0 0 15rem #f04037; }
+  .card__item._blue:hover {
+    box-shadow: inset 0 0 15rem #5454D4; }
+  .card__item._yellow:hover {
+    box-shadow: inset 0 0 15rem #fedc5a; } }
 .portfolio-section {
   padding-bottom: 168rem;
   position: relative; }
   .portfolio-section::before {
     content: '';
-    background: url("../../img/decorations/line.svg") 0 0/cover no-repeat;
+    background: url(../img/decorations/line.svg) 0 0/cover no-repeat;
     display: inline-block;
     width: 95rem;
     height: 28rem;
@@ -1301,7 +1306,7 @@ input:focus ~ .bar:after {
         bottom: 77rem; } }
   .portfolio-section::after {
     content: '';
-    background: url("../../img/decorations/circles.svg") 0 0/cover no-repeat;
+    background: url(../img/decorations/circles.svg) 0 0/cover no-repeat;
     display: inline-block;
     width: 62rem;
     height: 73rem;
@@ -1368,7 +1373,7 @@ input:focus ~ .bar:after {
     position: relative; }
     .contact-section__container::before {
       content: '';
-      background: url("../../img/decorations/circles.svg") 0 0/cover no-repeat;
+      background: url(../img/decorations/circles.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 51rem;
       height: 60rem;
@@ -1383,7 +1388,7 @@ input:focus ~ .bar:after {
           bottom: -68rem; } }
     .contact-section__container::after {
       content: '';
-      background: url("../../img/decorations/x.svg") 0 0/cover no-repeat;
+      background: url(../img/decorations/x.svg) 0 0/cover no-repeat;
       display: inline-block;
       width: 28rem;
       height: 28rem;
@@ -1422,13 +1427,14 @@ input:focus ~ .bar:after {
   100% {
     -webkit-transform: scale(0.93);
     transform: scale(0.93); } }
-    .contact-section__btn:hover {
-      background: #3131c4; }
     @media (max-width: 576px) {
       .contact-section__btn {
         line-height: 22rem;
         padding: 11rem 33rem; } }
 
+@media (hover: hover) {
+  .contact-section__btn:hover {
+    background: #3131c4; } }
 .footer {
   width: 100%;
   display: flex;
@@ -1466,8 +1472,6 @@ input:focus ~ .bar:after {
   100% {
     -webkit-transform: scale(0.93);
     transform: scale(0.93); } }
-      .footer__ul a:hover {
-        color: #5454D4; }
       @media (max-width: 992px) {
         .footer__ul a {
           font-family: "Nunito Sans", sans-serif;
@@ -1489,5 +1493,9 @@ input:focus ~ .bar:after {
         line-height: 28rem;
         font-weight: 400;
         color: #fff; } }
+
+@media (hover: hover) {
+  .footer__ul a:hover {
+    color: #5454D4; } }
 
 /*# sourceMappingURL=style.css.map */

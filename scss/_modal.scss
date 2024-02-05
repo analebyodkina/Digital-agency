@@ -1,153 +1,156 @@
 .pop-up {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.3s all ease-in-out;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 9999;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);    
-    transition: .3s all ease-in-out;   
-    transform: scale(0);
-	overflow: hidden;
-	z-index: 9999;    
-    &__container {
-        display: flex;
-		align-items: center;
-		justify-content: center;
-        width: 100%;
-        height: 100%;
+  }
+  &__body {
+    width: 500rem;
+    padding: 40rem;
+    background: $color-white;
+    text-align: center;
+    position: relative;
+    border-radius: 10rem;
+    @include mobile-576 {
+      width: 310rem;
+      padding: 20rem;
     }
-    &__body {        
-        width: 500rem;
-        padding: 40rem;		
-        background: $color-white;
-        text-align: center;        
-        position: relative;
-        border-radius: 10rem;
-		@include mobile-576 {
-			width: 310rem;
-			padding: 20rem;
-		}
+  }
+  &__title {
+    @include text($ff, 36rem, 46rem, 700, $color-primary);
+    margin-bottom: 35rem;
+    @include mobile-576 {
+      @include text($ff, 24rem, 29rem, 700, $color-primary);
     }
-    &__title {
-        @include text ($ff, 36rem, 46rem, 700, $color-primary);
-        margin-bottom: 35rem;
-		@include mobile-576 {
-			@include text ($ff, 24rem, 29rem, 700, $color-primary);
-		}
-    }    
-    
-    &__close {
-        font-size: 20rem;
-        position: absolute;
-        top: 20rem;
-        right: 20rem;
-        cursor: pointer;
-        color: $color-bg;
-    }
+  }
+
+  &__close {
+    font-size: 20rem;
+    position: absolute;
+    top: 20rem;
+    right: 20rem;
+    cursor: pointer;
+    color: $color-bg;
+  }
 }
 .pop-up.active {
-    transform: scale(100%);
+  transform: scale(100%);
 }
 .form {
-    &__group {
-        position: relative;
-        margin-bottom: 40rem;        
-        height: auto;
+  &__group {
+    position: relative;
+    margin-bottom: 40rem;
+    height: auto;
+  }
+  &__input {
+    display: block;
+    font-size: 18rem;
+    width: 100%;
+    padding: 10rem;
+    border: none;
+    border-bottom: 1rem solid #ccc;
+    &:focus {
+      outline: none;
     }
-    &__input {
-        display: block;	        
-        font-size: 18rem;
-        width: 100%;
-        padding: 10rem;
-        border: none;
-        border-bottom: 1rem solid #ccc;
-        &:focus {
-            outline: none;            
-        }
-    }    
-    label  {        
-        position: relative;         
-        transition: all 0.2s ease;       
+  }
+  label {
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  .field__title {
+    position: absolute;
+    left: -195rem;
+    bottom: 10rem;
+    color: #999;
+    font-size: 18rem;
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+    @include mobile-576 {
+      left: -127rem;
     }
-    .field__title {
-        position: absolute;
-        left: -195rem;
-        bottom: 10rem;
-        color: #999;
-        font-size: 18rem;
-        transition: all 0.4s ease-in-out;
-        pointer-events: none;
-        @include mobile-576 {
-            left: -127rem;
-        }
-        &.active {
-            bottom: 40rem;
-            left: -190rem;
-	        font-size: 12rem;
-            color: $color-primary
-        }
+    &.active {
+      bottom: 40rem;
+      left: -190rem;
+      font-size: 12rem;
+      color: $color-primary;
     }
-    &__footer {
-        @include flex-between;
-        margin-top: 30rem;
+    @include mobile-576 {
+      &.active {
+        left: -130rem;
+      }
     }
-    &__text {
-        @include text($ff, 18rem, 24rem, 700, $contact-bg);
+  }
+  &__footer {
+    @include flex-between;
+    margin-top: 30rem;
+  }
+  &__text {
+    @include text($ff, 18rem, 24rem, 700, $contact-bg);
+  }
+  &__socials {
+    display: flex;
+    gap: 12rem;
+    a {
+      display: inline-block;
+      border-radius: 50%;
+      transition: $transition;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
-    &__socials {
-        display: flex;        
-        gap: 12rem;        
-        a {
-            display: inline-block;
-            border-radius: 50%;
-            transition: $transition;            
-            &:hover {
-                transform: scale(1.2);                
-            }
-        }        
-        img {
-            border-radius: 50%;
-            transition: $transition;
-            width: 25rem;          
-           
-        }
+    img {
+      border-radius: 50%;
+      transition: $transition;
+      width: 25rem;
     }
-    &__btn {
-        padding: 16rem 27rem;
-        cursor: pointer;
-        @include text($ff, 20rem, 27rem, 700, $color-white);        
-        @include press;
-        @include mobile-576 {
-            @include text($ff, 16rem, 22rem, 700, $color-white);
-            padding: 12rem 21rem; 
-        }
-        &:hover {
-            background: darken($color-primary, 10%);
-        }
+  }
+  &__btn {
+    padding: 16rem 27rem;
+    cursor: pointer;
+    @include text($ff, 20rem, 27rem, 700, $color-white);
+    @include press;
+    @include mobile-576 {
+      @include text($ff, 16rem, 22rem, 700, $color-white);
+      padding: 12rem 21rem;
     }
+    &:hover {
+      background: darken($color-primary, 10%);
+    }
+  }
 }
 .bar {
-	display: block;
-	position: relative;	
+  display: block;
+  position: relative;
 }
 .bar:before,
 .bar:after {
-	content: "";
-	height: 2rem;
-	width: 0;
-	bottom: 0;
-	position: absolute;
-	background: $color-primary;
-	transition: all 0.2s ease;
+  content: "";
+  height: 2rem;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: $color-primary;
+  transition: all 0.2s ease;
 }
 .bar:before {
-	left: 50%;
+  left: 50%;
 }
 .bar:after {
-	right: 50%;
+  right: 50%;
 }
 input:focus ~ .bar:before,
 input:focus ~ .bar:after {
-	width: 50%;
+  width: 50%;
 }
-
