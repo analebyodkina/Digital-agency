@@ -56,5 +56,51 @@
   .nav__ul.active {
     transform: translateY(0%);
     z-index: 99;
+    .nav__li a {
+      -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      
+    }
+    .nav__li:first-of-type a{
+      animation-delay: 1.1s;
+    }
+    .nav__li:nth-child(2) a{
+      animation-delay: 0.9s;
+    }
+    .nav__li:nth-child(3) a{
+      animation-delay: 0.7s;
+    }
+    .nav__li:nth-child(4) a{
+      animation-delay: 0.5s;
+    }
+    .nav__li:last-of-type a {
+      animation-delay: 0.3s;
+    }
+    
+    @-webkit-keyframes slide-in-top {
+      0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slide-in-top {
+      0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
 }
